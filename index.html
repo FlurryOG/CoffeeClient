@@ -1,0 +1,1595 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Local help for Coffee Client profiles, modpacks, accounts, skins, servers, updates and settings."
+    />
+    <title>Start here | Coffee Client Wiki</title>
+    <link rel="icon" href="./assets/icon.png" type="image/png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="Wiki navigation">
+        <a class="brand" href="#start" data-link
+          ><img src="./assets/icon.png" alt="" /><span
+            >Coffee Client<small>Guide &amp; help</small></span
+          ></a
+        >
+        <nav aria-label="Topics">
+          <div class="nav-group" data-nav-group>
+            <h2 class="nav-group-title">
+              <button
+                class="nav-group-toggle"
+                type="button"
+                aria-expanded="true"
+                aria-controls="nav-get-started"
+                data-nav-toggle
+              >
+                <span>Get started</span
+                ><span class="nav-chevron" aria-hidden="true"></span>
+              </button>
+            </h2>
+            <div class="nav-group-links" id="nav-get-started" data-nav-panel>
+              <a class="nav-link" href="#start" data-link>Start here</a>
+              <a class="nav-link" href="#profiles" data-link>Make a profile</a>
+              <a class="nav-link" href="#play" data-link>Launch your game</a>
+              <a class="nav-link" href="#bedrock" data-link>Play Bedrock</a>
+              <a class="nav-link" href="#library" data-link>Manage profiles</a>
+              <a class="nav-link" href="#import" data-link>Import a modpack</a>
+              <a class="nav-link" href="#accounts" data-link>Add an account</a>
+            </div>
+          </div>
+          <div class="nav-group" data-nav-group>
+            <h2 class="nav-group-title">
+              <button
+                class="nav-group-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-make-it-yours"
+                data-nav-toggle
+              >
+                <span>Make it yours</span
+                ><span class="nav-chevron" aria-hidden="true"></span>
+              </button>
+            </h2>
+            <div
+              class="nav-group-links"
+              id="nav-make-it-yours"
+              data-nav-panel
+              hidden
+            >
+              <a class="nav-link" href="#content" data-link
+                >Mods, shaders &amp; packs</a
+              >
+              <a class="nav-link" href="#browse" data-link>Browse content</a>
+              <a class="nav-link" href="#local-content" data-link
+                >Import local files</a
+              >
+              <a class="nav-link" href="#mod-updates" data-link>Update mods</a>
+              <a class="nav-link" href="#skins" data-link>Skins</a>
+              <a class="nav-link" href="#capes" data-link>Capes</a>
+              <a class="nav-link" href="#duplicate" data-link
+                >Duplicate a profile</a
+              >
+            </div>
+          </div>
+          <div class="nav-group" data-nav-group>
+            <h2 class="nav-group-title">
+              <button
+                class="nav-group-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-servers"
+                data-nav-toggle
+              >
+                <span>Host a server</span
+                ><span class="nav-chevron" aria-hidden="true"></span>
+              </button>
+            </h2>
+            <div class="nav-group-links" id="nav-servers" data-nav-panel hidden>
+              <a class="nav-link" href="#servers" data-link>Start a server</a>
+              <a class="nav-link" href="#server-types" data-link
+                >Choose a server type</a
+              >
+              <a class="nav-link" href="#server-content" data-link
+                >Server mods &amp; plugins</a
+              >
+              <a class="nav-link" href="#server-manage" data-link
+                >Manage a server</a
+              >
+              <a class="nav-link" href="#sharing" data-link>Share a server</a>
+            </div>
+          </div>
+          <div class="nav-group" data-nav-group>
+            <h2 class="nav-group-title">
+              <button
+                class="nav-group-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-settings"
+                data-nav-toggle
+              >
+                <span>Settings &amp; updates</span
+                ><span class="nav-chevron" aria-hidden="true"></span>
+              </button>
+            </h2>
+            <div
+              class="nav-group-links"
+              id="nav-settings"
+              data-nav-panel
+              hidden
+            >
+              <a class="nav-link" href="#appearance" data-link
+                >Appearance &amp; Discord</a
+              >
+              <a class="nav-link" href="#advanced" data-link
+                >Advanced features</a
+              >
+              <a class="nav-link" href="#snapshots" data-link
+                >Show Minecraft snapshots</a
+              >
+              <a class="nav-link" href="#files" data-link>Find your files</a>
+              <a class="nav-link" href="#updates" data-link
+                >Update Coffee Client</a
+              >
+            </div>
+          </div>
+          <div class="nav-group" data-nav-group>
+            <h2 class="nav-group-title">
+              <button
+                class="nav-group-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-help"
+                data-nav-toggle
+              >
+                <span>Help &amp; privacy</span
+                ><span class="nav-chevron" aria-hidden="true"></span>
+              </button>
+            </h2>
+            <div class="nav-group-links" id="nav-help" data-nav-panel hidden>
+              <a class="nav-link" href="#console" data-link>Read logs</a>
+              <a class="nav-link" href="#privacy" data-link
+                >Privacy &amp; sharing</a
+              >
+              <a class="nav-link" href="#help" data-link
+                >When something goes wrong</a
+              >
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button
+            id="menu-button"
+            aria-label="Open navigation"
+            aria-controls="sidebar"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <span class="topbar-label">Coffee Client Wiki</span>
+          <div class="search-wrap">
+            <label for="search" class="sr-only">Search guides</label>
+            <input
+              id="search"
+              class="search"
+              type="search"
+              autocomplete="off"
+              placeholder="Search guides...  /"
+              aria-controls="search-results"
+            />
+            <div id="search-results" class="search-results" hidden></div>
+            <div id="no-results" class="no-results" hidden>
+              No guides found. Try a different word.
+            </div>
+          </div>
+          <label class="theme-control">
+            <span class="theme-label">Theme</span>
+            <select
+              id="theme-select"
+              aria-label="Wiki theme"
+              title="Wiki theme"
+            >
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+        </header>
+        <div class="content">
+          <article
+            class="article"
+            id="start"
+            data-page
+            data-title="Start here"
+            data-summary="The shortest path from opening Coffee Client to playing Minecraft."
+            data-keywords="home launch play getting started"
+          >
+            <div class="home-banner">
+              <div>
+                <p class="eyebrow">Your guide to Coffee Client</p>
+                <h1>Start here.</h1>
+                <p class="intro">
+                  Set up a profile, choose how to play, and make Coffee Client
+                  your own.
+                </p>
+              </div>
+              <img src="./assets/icon.png" alt="Coffee Client cup icon" />
+            </div>
+            <h2>What would you like to do?</h2>
+            <div class="guide-grid">
+              <a class="guide-card" href="#profiles"
+                ><span class="num">01 / PLAY</span
+                ><strong>Make a profile</strong
+                ><span>Choose Minecraft, a version, and a loader.</span></a
+              >
+              <a class="guide-card" href="#import"
+                ><span class="num">02 / BRING A PACK</span
+                ><strong>Import a modpack</strong
+                ><span>Bring in a Modrinth or CurseForge pack.</span></a
+              >
+              <a class="guide-card" href="#accounts"
+                ><span class="num">03 / SIGN IN</span
+                ><strong>Add an account</strong
+                ><span>Connect Microsoft for online Java play.</span></a
+              >
+              <a class="guide-card" href="#servers"
+                ><span class="num">04 / PLAY TOGETHER</span
+                ><strong>Start a server</strong
+                ><span>Create a simple Vanilla server on this PC.</span></a
+              >
+            </div>
+            <div class="callout">
+              <p>
+                <strong>New to this?</strong> Start with
+                <a href="#profiles">Make a profile</a>. Coffee Client prepares
+                game files when you launch; the first launch can take longer
+                while it downloads what it needs.
+              </p>
+            </div>
+            <h2>Know your way around</h2>
+            <p>
+              <strong>Launcher</strong> is where you choose a profile and play.
+              <strong>Servers</strong> holds servers hosted on your computer.
+              <strong>Skins</strong> opens your skin library.
+              <strong>Settings</strong> holds account, appearance, update, and
+              advanced options.
+            </p>
+            <div class="mini-links">
+              <a href="#play">First launch</a><a href="#browse">Find mods</a
+              ><a href="#mod-updates">Update mods</a><a href="#skins">Skins</a
+              ><a href="#sharing">Share a server</a
+              ><a href="#help">Fix a problem</a>
+            </div>
+            <p class="article-footer">
+              The guide built into Coffee Client works offline. The web version
+              needs an internet connection.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="profiles"
+            data-page
+            data-title="Make a profile"
+            data-summary="Create a Vanilla, Fabric, Forge, NeoForge or other supported game profile."
+            data-keywords="new profile minecraft version loader launch play"
+          >
+            <p class="eyebrow">Launcher / profiles</p>
+            <h1>Make a profile</h1>
+            <p class="intro">
+              A profile keeps a Minecraft version, loader, and its game content
+              together.
+            </p>
+            <ol class="steps">
+              <li>
+                Open the <strong>Launcher</strong> view and click
+                <strong>New profile / Import pack</strong>.
+              </li>
+              <li>
+                Stay on the <strong>New profile</strong> tab. Enter a
+                <strong>Profile name</strong>.
+              </li>
+              <li>
+                Choose a <strong>Mod loader</strong>. Pick
+                <strong>Vanilla</strong> if you do not need mods.
+              </li>
+              <li>
+                Choose a <strong>Minecraft version</strong> from the versions
+                available for that loader.
+              </li>
+              <li>
+                Click <strong>Create profile</strong>. Select your new profile
+                in the list, then use the launch button to play.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                <strong>Which loader?</strong> Use the one your mods or modpack
+                require. Fabric, Quilt, Forge, and NeoForge mods are not
+                interchangeable. When in doubt, start with Vanilla.
+              </p>
+            </div>
+            <h2>After you create it</h2>
+            <p>
+              The selected profile shows its name, version, loader, and player
+              name on the Launcher screen. You can open <strong>Mods</strong>,
+              <strong>Shaders</strong>, or <strong>Texture Packs</strong> for
+              that profile. These are separate from another profile's content.
+            </p>
+            <p>
+              For an existing Modrinth or CurseForge pack, use
+              <a href="#import">Import a modpack</a> instead of recreating it by
+              hand. To copy a profile, see
+              <a href="#duplicate">Duplicate a profile</a>.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="play"
+            data-page
+            data-title="Launch your game"
+            data-summary="Select a profile, check your account, and get through the first launch."
+            data-keywords="play first launch minecraft status progress offline account download"
+          >
+            <p class="eyebrow">Launcher / play</p>
+            <h1>Launch your game</h1>
+            <p class="intro">
+              The first launch prepares Minecraft, its loader, and any files
+              your profile needs. Later launches can reuse them.
+            </p>
+            <ol class="steps">
+              <li>
+                Select a profile in the <strong>Library</strong>. Check its
+                Minecraft version and mod loader in the main panel.
+              </li>
+              <li>
+                Check the active account under
+                <strong>Settings &rarr; Account</strong>. Without a connected
+                Microsoft account, the <strong>Player name</strong> field is
+                used for offline play.
+              </li>
+              <li>
+                Click <strong>Launch Minecraft</strong> and watch the status and
+                download progress. Keep Coffee Client open while it prepares.
+              </li>
+              <li>
+                Wait for the game window. If the launcher reports an error, open
+                <a href="#console">Console</a> and check the newest messages.
+              </li>
+            </ol>
+            <h2>First-launch checks</h2>
+            <p>
+              If a loader or Minecraft version is unavailable, refresh versions
+              and confirm the profile still matches its mods. A modpack's
+              version and loader are fixed in its profile to protect
+              compatibility. To try another version,
+              <a href="#duplicate">duplicate the profile</a> and review any mod
+              warnings.
+            </p>
+            <div class="callout">
+              <p>
+                <strong>Before changing Java or memory:</strong> let the normal
+                launch attempt finish and read its error. Those controls are
+                under <a href="#advanced">Advanced features</a>, but changing
+                them blindly can hide the real problem.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="bedrock"
+            data-page
+            data-title="Play Bedrock Edition"
+            data-summary="Open the installed Minecraft for Windows edition from a Bedrock profile."
+            data-keywords="bedrock edition minecraft for windows install microsoft store java mods account"
+          >
+            <p class="eyebrow">Launcher / Windows edition</p>
+            <h1>Play Bedrock Edition</h1>
+            <p class="intro">
+              Coffee Client opens Minecraft for Windows when it is already
+              installed on this PC.
+            </p>
+            <ol class="steps">
+              <li>
+                On Windows, click <strong>New profile / Import pack</strong> and
+                stay on <strong>New profile</strong>.
+              </li>
+              <li>
+                Choose <strong>Bedrock Edition</strong> as the mod loader, name
+                the profile, and click <strong>Create profile</strong>.
+              </li>
+              <li>
+                Select that profile and click <strong>Launch Minecraft</strong>.
+                If Minecraft for Windows is missing, install it first and try
+                again.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                Bedrock is separate from Java Edition. Coffee Client's Java mod,
+                shader, Java account, and Java runtime controls do not manage
+                the Windows game. Sign in and manage Bedrock content inside
+                Minecraft for Windows.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="library"
+            data-page
+            data-title="Manage profiles"
+            data-summary="Find, rename, duplicate, or remove a profile without losing track of its files."
+            data-keywords="library search rename delete remove profile folder files copy"
+          >
+            <p class="eyebrow">Launcher / library</p>
+            <h1>Manage profiles</h1>
+            <p class="intro">
+              Each Library entry is a separate game setup. Select one before
+              changing its mods or launch settings.
+            </p>
+            <h2>Find or rename one</h2>
+            <p>
+              Use <strong>Search profiles</strong> above the Library list to
+              narrow it down. Select a profile to see its name, player name,
+              version, and loader. Edit the visible profile name; Coffee Client
+              saves that with the profile when you switch profiles or launch.
+            </p>
+            <h2>Copy or remove one</h2>
+            <p>
+              <strong>Duplicate</strong> makes a new profile and can target
+              another Minecraft version; review the compatibility warning before
+              confirming. The trash button removes the selected profile from the
+              Library after confirmation. It
+              <strong>does not delete the profile folder</strong> from disk, and
+              the last remaining profile cannot be removed.
+            </p>
+            <div class="callout warning">
+              <p>
+                Removing a profile from the list is not a disk-cleanup tool.
+                Open its game folder first if you need to keep worlds,
+                screenshots, configs, or saves, and see
+                <a href="#files">Find your files</a>.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="import"
+            data-page
+            data-title="Import a modpack"
+            data-summary="Import a Modrinth or CurseForge pack as a new Coffee Client profile."
+            data-keywords="import profile pack mrpack modrinth curseforge zip drag drop optional"
+          >
+            <p class="eyebrow">Launcher / profiles</p>
+            <h1>Import a modpack</h1>
+            <p class="intro">
+              Coffee Client can make a new profile from a Modrinth
+              <code>.mrpack</code> or CurseForge export <code>.zip</code>.
+            </p>
+            <ol class="steps">
+              <li>
+                Get a Modrinth <code>.mrpack</code> or CurseForge modpack export
+                <code>.zip</code> from a source you trust.
+              </li>
+              <li>
+                In <strong>Launcher</strong>, click
+                <strong>New profile / Import pack</strong>, then open
+                <strong>Import modpack</strong>.
+              </li>
+              <li>
+                Click <strong>Choose file</strong>, or drop the file onto the
+                import area.
+              </li>
+              <li>
+                Review the pack preview. Set its <strong>Profile name</strong>;
+                choose <strong>Include optional mods</strong> only if you want
+                them.
+              </li>
+              <li>
+                Click <strong>Import modpack</strong> and wait for it to finish.
+                Then choose the new profile in the Launcher list.
+              </li>
+            </ol>
+            <div class="callout warning">
+              <p>
+                <strong>Important:</strong> A CurseForge pack needs
+                <code>manifest.json</code> inside the ZIP; an arbitrary ZIP of
+                mods is not a modpack export. Most CurseForge packs also need
+                authorized CurseForge API access to fetch their listed files.
+                Coffee Client shows an error if that access is missing or a file
+                cannot be downloaded automatically. Import never copies account
+                credentials, and the pack's Minecraft version and loader stay
+                fixed in the normal profile form.
+              </p>
+            </div>
+            <h2>Before you launch</h2>
+            <p>
+              Make sure your account is selected if you need online play. Let
+              the first launch finish downloading the game and loader files. If
+              a pack asks for optional files that were not included, you can
+              manage content from the profile's Mods, Shaders, and Texture Packs
+              views.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="accounts"
+            data-page
+            data-title="Add an account"
+            data-summary="Sign in with Microsoft and switch between connected Java accounts."
+            data-keywords="microsoft sign in multiplayer offline use remove account bedrock"
+          >
+            <p class="eyebrow">Settings / account</p>
+            <h1>Add an account</h1>
+            <p class="intro">
+              Connect your Microsoft account to use your owned Java account for
+              online play.
+            </p>
+            <ol class="steps">
+              <li>
+                Open <strong>Settings</strong> and select
+                <strong>Account</strong>.
+              </li>
+              <li>
+                Click <strong>Sign in with Microsoft</strong>. Complete sign-in
+                in the <strong>Sign in to Coffee Client</strong> window.
+              </li>
+              <li>
+                Return to Coffee Client and select the account you want to play
+                with. Use <strong>Use</strong> on its row if it is not active.
+              </li>
+              <li>
+                To connect another account, choose
+                <strong>Add another Microsoft account</strong>. To disconnect
+                one, use <strong>Remove account</strong> on its row.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                <strong>Offline play:</strong> When no Microsoft account is
+                connected, the Launcher uses the
+                <strong>Player name</strong> you enter for offline launches.
+                Sign in for authenticated multiplayer and for applying a skin to
+                a Java account.
+              </p>
+            </div>
+            <p>
+              Bedrock Edition handles Microsoft sign-in inside Minecraft for
+              Windows; the Java account list here is separate.
+            </p>
+            <h2>Switch or sign out</h2>
+            <p>
+              Click <strong>Use</strong> on another account row to make that
+              Java account active for the next authenticated launch and account
+              cosmetics. Use <strong>Remove account</strong> for one connection,
+              or <strong>Sign out all accounts</strong> when you want to
+              disconnect every saved Java account.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="content"
+            data-page
+            data-title="Mods, shaders & packs"
+            data-summary="Find and manage content for the selected profile."
+            data-keywords="mods shaders texture packs resource packs import download update installed"
+          >
+            <p class="eyebrow">Launcher / content</p>
+            <h1>Mods, shaders &amp; packs</h1>
+            <p class="intro">
+              Choose a profile first, then add content that matches its
+              Minecraft version and loader.
+            </p>
+            <ol class="steps">
+              <li>
+                In <strong>Launcher</strong>, select the profile you want to
+                change.
+              </li>
+              <li>
+                Click <strong>Mods</strong>, <strong>Shaders</strong>, or
+                <strong>Texture Packs</strong> above the launch form.
+              </li>
+              <li>
+                Browse available projects or use the import controls for files
+                you already have. Check the Minecraft version and loader before
+                installing.
+              </li>
+              <li>
+                Open your installed content in the same view to manage it.
+                Changes to one profile do not automatically change another.
+              </li>
+            </ol>
+            <div class="callout warning">
+              <p>
+                <strong>Compatibility matters.</strong> A mod built for one
+                loader or Minecraft version may prevent the game from opening on
+                another. For a broken launch, disable your most recently added
+                mod and try again.
+              </p>
+            </div>
+            <p>
+              Imported modpack profiles keep their own content and are not
+              automatically given Coffee Client's usual added mods. The pack's
+              setup stays separate from your other profiles.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="browse"
+            data-page
+            data-title="Browse content"
+            data-summary="Search compatible mods and packs, inspect versions, and install them into one profile."
+            data-keywords="browse modrinth curseforge search pagination previous next install version dependencies"
+          >
+            <p class="eyebrow">Launcher / content</p>
+            <h1>Browse content</h1>
+            <p class="intro">
+              Find a version that fits the profile you have selected, then
+              install it only there.
+            </p>
+            <ol class="steps">
+              <li>
+                Select a Java profile and open <strong>Mods</strong>,
+                <strong>Shaders</strong>, or <strong>Texture Packs</strong>.
+              </li>
+              <li>
+                Choose <strong>Browse</strong>, then pick
+                <strong>Modrinth</strong> or <strong>CurseForge</strong>. Search
+                for the project you want.
+              </li>
+              <li>
+                Use <strong>Previous</strong> and <strong>Next</strong> above or
+                below results to move between pages. Open a result to review its
+                description and available versions.
+              </li>
+              <li>
+                Choose a compatible version and click <strong>Install</strong>.
+                Required dependencies are included when the provider makes them
+                available.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                <strong>CurseForge access:</strong> direct browsing and
+                downloads need authorized CurseForge access configured for this
+                launcher. If it is unavailable, use the publisher page or import
+                a local file you already have. Do not treat a failed download as
+                an installed mod.
+              </p>
+            </div>
+            <p>
+              Shaders still need a compatible shader engine in Minecraft. A
+              texture pack can be installed into the profile but must also be
+              selected in Minecraft's resource-pack menu.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="local-content"
+            data-page
+            data-title="Import local files"
+            data-summary="Add files you already downloaded and identify matching artwork and descriptions."
+            data-keywords="import jar zip litemod local file drag drop find artwork sha512 identify modpack"
+          >
+            <p class="eyebrow">Launcher / content</p>
+            <h1>Import local files</h1>
+            <p class="intro">
+              Already have a mod, shader, or texture pack on disk? Add it to the
+              selected profile instead of downloading it again.
+            </p>
+            <ol class="steps">
+              <li>
+                Select the profile and open its <strong>Mods</strong>,
+                <strong>Shaders</strong>, or
+                <strong>Texture Packs</strong> window.
+              </li>
+              <li>
+                Click <strong>Import</strong> and select the file, or drop it
+                into the content window.
+              </li>
+              <li>
+                Switch to <strong>Installed</strong> to see it. Select a file
+                for <strong>Show file</strong>, <strong>Remove</strong>, or the
+                <strong>Enabled</strong> switch on mods.
+              </li>
+              <li>
+                Click <strong>Find artwork</strong> if imported files only show
+                filenames. This checks for exact matches on Modrinth and can add
+                titles, artwork, and descriptions.
+              </li>
+            </ol>
+            <div class="callout warning">
+              <p>
+                Manual imports are not a compatibility check. Use a mod file
+                made for the profile's Minecraft version and loader.
+                <strong>Find artwork</strong> sends file fingerprints, not the
+                files themselves, to Modrinth; unmatched files stay as they are.
+              </p>
+            </div>
+            <p>
+              For a complete exported pack, use
+              <a href="#import">Import a modpack</a>. Importing a single JAR or
+              ZIP here does not create a new profile or install a pack's
+              dependency list.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="mod-updates"
+            data-page
+            data-title="Update installed mods"
+            data-summary="Check recognized installed mods for compatible updates and review them before applying."
+            data-keywords="check updates update all update button modrinth curseforge installed disabled"
+          >
+            <p class="eyebrow">Launcher / mods</p>
+            <h1>Update installed mods</h1>
+            <p class="intro">
+              Coffee Client checks known mods against the profile's exact
+              Minecraft version and loader.
+            </p>
+            <ol class="steps">
+              <li>
+                Close Minecraft, select the profile, and open
+                <strong>Mods</strong>.
+              </li>
+              <li>
+                Go to <strong>Installed</strong> and click
+                <strong>Check updates</strong>.
+              </li>
+              <li>
+                When an update is found, select a mod and click its
+                <strong>Update</strong> button, or use
+                <strong>Update all</strong> for the available set.
+              </li>
+              <li>
+                Read any failures in the window. A mod without a known project
+                match is not updated just because its filename looks familiar.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                Mods you imported manually may need
+                <a href="#local-content">Find artwork</a> before Coffee Client
+                can recognize them. CurseForge update checks need authorized
+                CurseForge access. The launcher does not replace a stable
+                release with a beta or alpha automatically.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="skins"
+            data-page
+            data-title="Skins"
+            data-summary="Import PNG skins, choose Classic or Slim, and apply one to your Java account."
+            data-keywords="skin add skins png 64x64 64x32 classic slim apply bedrock"
+          >
+            <p class="eyebrow">Your look</p>
+            <h1>Skins</h1>
+            <p class="intro">
+              Keep a local skin library and apply a favorite to your signed-in
+              Java account.
+            </p>
+            <ol class="steps">
+              <li>Click <strong>Skins</strong> in Coffee Client.</li>
+              <li>
+                Click <strong>Add skins</strong>, or drop PNG files onto
+                <strong>Drop skin files</strong>.
+              </li>
+              <li>
+                Select a skin from the library. Choose the
+                <strong>Classic</strong> or <strong>Slim</strong> model; rename
+                it and click <strong>Save changes</strong> if needed.
+              </li>
+              <li>
+                Sign in with Microsoft, then click
+                <strong>Apply skin</strong> to use it on that Java account.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                Skin files must be PNG images sized <strong>64 × 64</strong> or
+                <strong>64 × 32</strong>, up to <strong>1 MiB</strong> each. The
+                library holds up to <strong>50</strong> skins. Duplicate PNG
+                files are skipped.
+              </p>
+            </div>
+            <p>
+              You can download a saved skin PNG or delete a skin from its
+              details. Bedrock skins are managed inside Minecraft for Windows,
+              not through this Java skin library.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="capes"
+            data-page
+            data-title="Capes"
+            data-summary="See capes owned by your Minecraft account and choose which one is active."
+            data-keywords="capes account equip disable cape nickname refresh owned microsoft preview"
+          >
+            <p class="eyebrow">Your look</p>
+            <h1>Capes</h1>
+            <p class="intro">
+              Capes come from your signed-in Minecraft account. Coffee Client
+              can show and equip the ones that account owns.
+            </p>
+            <ol class="steps">
+              <li>
+                Sign in through <strong>Settings &rarr; Account</strong>, then
+                open <strong>Skins</strong> and switch to
+                <strong>Capes</strong>.
+              </li>
+              <li>
+                Click <strong>Refresh</strong> to load the active account's
+                capes. Select one to preview it.
+              </li>
+              <li>
+                Use <strong>Equip cape</strong> to make it active, or
+                <strong>Disable cape</strong> to use none.
+              </li>
+              <li>
+                Give a cape a local nickname and save it if you want an easier
+                label in your library.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                The launcher cannot grant new capes. If the list is empty, check
+                that the right Microsoft account is active and that it owns a
+                cape.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="duplicate"
+            data-page
+            data-title="Duplicate a profile"
+            data-summary="Copy a profile, optionally targeting another Minecraft version."
+            data-keywords="dupe copy profile change version incompatible mods"
+          >
+            <p class="eyebrow">Launcher / profiles</p>
+            <h1>Duplicate a profile</h1>
+            <p class="intro">
+              Make a separate copy when you want to experiment or try another
+              Minecraft version.
+            </p>
+            <ol class="steps">
+              <li>
+                Select the profile you want to copy in
+                <strong>Launcher</strong>.
+              </li>
+              <li>
+                Use the profile's duplicate control to open
+                <strong>Duplicate profile</strong>.
+              </li>
+              <li>
+                Give the copy a <strong>Profile name</strong> and choose its
+                <strong>Minecraft version</strong>.
+              </li>
+              <li>
+                Review any warning about mods that cannot change versions. Those
+                mods will be copied disabled if you continue.
+              </li>
+              <li>
+                Confirm the duplicate, then select and launch the new profile
+                separately.
+              </li>
+            </ol>
+            <div class="callout warning">
+              <p>
+                Some mods do not have a version that matches your target. Do not
+                enable an incompatible mod in the new profile just because it
+                worked in the original.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="servers"
+            data-page
+            data-title="Start a server"
+            data-summary="Create and start a simple Vanilla server, and optionally share it with friends."
+            data-keywords="server host vanilla create start allowed players eula address share relay"
+          >
+            <p class="eyebrow">Servers / first server</p>
+            <h1>Start a simple server</h1>
+            <p class="intro">
+              Host a Minecraft world on this computer while Coffee Client stays
+              open.
+            </p>
+            <ol class="steps">
+              <li>
+                Open the <strong>Servers</strong> view and find
+                <strong>New server</strong>.
+              </li>
+              <li>
+                Enter a <strong>Server name</strong>. Choose
+                <strong>Vanilla</strong> as <strong>Server type</strong> for an
+                unmodded server, then choose a
+                <strong>Minecraft version</strong>.
+              </li>
+              <li>
+                Leave <strong>Memory (MB)</strong> at its default unless you
+                know your computer needs something else.
+              </li>
+              <li>
+                Enter <strong>Allowed players</strong>, one Minecraft username
+                per line. Include your own username.
+              </li>
+              <li>
+                Read and accept the <strong>Minecraft EULA</strong>, then click
+                <strong>Create server</strong>.
+              </li>
+              <li>
+                Select the new server and click <strong>Start</strong>. Wait for
+                its status and log to show it is ready before connecting.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                <strong>Create</strong> only saves the server.
+                <strong>Start</strong> downloads and prepares what it needs,
+                then runs it. The first start can take longer. The
+                <strong>On this PC</strong> address is for this computer only.
+              </p>
+            </div>
+            <h2>Invite a friend</h2>
+            <p>
+              While creating or editing a server, turn on
+              <strong>Share with friends using Server-Hosting</strong> and
+              accept its separate consent. After the server starts, use the
+              share address shown in the server details. Sharing uses a
+              third-party relay and is intended for temporary sessions; do not
+              assume the address is permanent. Only the usernames in
+              <strong>Allowed players</strong> can join.
+            </p>
+            <div class="callout warning">
+              <p>
+                Keep Coffee Client open while people play. Closing Coffee stops
+                its running servers. Use <strong>Stop</strong> and wait for the
+                world to save before shutting down your computer.
+                <strong>Remove</strong> removes the library entry, but server
+                world files are kept on disk.
+              </p>
+            </div>
+            <h2>Beyond Vanilla</h2>
+            <p>
+              The server type list also includes Fabric, Quilt, Forge, NeoForge,
+              Paper, Purpur, Folia, Spigot, SpongeVanilla, and Pumpkin where
+              compatible versions are available. Pick the type your players and
+              server content require. Some types need extra setup or are
+              experimental; Vanilla is the easiest first server. See
+              <a href="#server-types">Choose a server type</a> for the
+              differences.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="server-types"
+            data-page
+            data-title="Choose a server type"
+            data-summary="Pick Vanilla, a mod loader, a plugin server, or Pumpkin for your group."
+            data-keywords="vanilla fabric quilt forge neoforge paper purpur folia spigot sponge pumpkin server type mods plugins"
+          >
+            <p class="eyebrow">Servers / choosing</p>
+            <h1>Choose a server type</h1>
+            <p class="intro">
+              The best choice depends on the content your group needs. Choose
+              the type before making the server.
+            </p>
+            <ul>
+              <li>
+                <strong>Vanilla:</strong> standard Minecraft with no server mod
+                or plugin workflow. Start here for a simple world.
+              </li>
+              <li>
+                <strong>Fabric, Quilt, Forge, NeoForge:</strong> use server mods
+                built for that loader and Minecraft version. Players may also
+                need matching client mods.
+              </li>
+              <li>
+                <strong>Paper, Purpur, Spigot:</strong> use plugins rather than
+                Fabric or Forge mods. Spigot needs Git and a compatible JDK for
+                its first build.
+              </li>
+              <li>
+                <strong>Folia:</strong> a Paper-family server that requires
+                plugins made for Folia. Its available BETA builds need explicit
+                experimental consent.
+              </li>
+              <li>
+                <strong>SpongeVanilla:</strong> choose it for Sponge-compatible
+                server content.
+              </li>
+              <li>
+                <strong>Pumpkin:</strong> an experimental native server using
+                WASM plugins rather than Java JARs. It requires separate consent
+                and does not offer Server-Hosting sharing.
+              </li>
+            </ul>
+            <div class="callout warning">
+              <p>
+                Not every Minecraft release is available for every server type.
+                The version list is filtered by the selected type. A client mod
+                and a server plugin are not interchangeable.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="server-content"
+            data-page
+            data-title="Server mods and plugins"
+            data-summary="Add compatible content to a stopped modded server."
+            data-keywords="server mods plugins fabric forge neoforge paper folia spigot pumpkin wasm import search enable"
+          >
+            <p class="eyebrow">Servers / content</p>
+            <h1>Server mods &amp; plugins</h1>
+            <p class="intro">
+              Server content lives with that server, not with your player
+              profile.
+            </p>
+            <ol class="steps">
+              <li>
+                Stop the server and select it in <strong>Servers</strong>.
+              </li>
+              <li>
+                Open its <strong>Mods</strong>, <strong>Plugins</strong>, or
+                <strong>WASM plugins</strong> tab, depending on server type.
+              </li>
+              <li>
+                Use <strong>Browse mods</strong> or
+                <strong>Browse plugins</strong> to search compatible provider
+                content where available, or click <strong>Import</strong> for a
+                trusted local file.
+              </li>
+              <li>
+                Use the switch next to an installed file to enable or disable
+                it. Restart the server after content changes.
+              </li>
+            </ol>
+            <div class="callout warning">
+              <p>
+                Manual imports are not compatibility-checked. Fabric, Quilt,
+                Forge, and NeoForge use their matching server mods; Paper-family
+                servers use plugins. Folia plugins need Folia support. Pumpkin
+                uses WASM plugins and does not have the catalog search shown for
+                other types. Vanilla has no content tab.
+              </p>
+            </div>
+            <p>
+              You cannot change server content while that server is preparing or
+              running. If a newly added file prevents startup, stop the server,
+              disable that file, and check the
+              <a href="#console">Server log</a>.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="server-manage"
+            data-page
+            data-title="Manage a server"
+            data-summary="Change a stopped server, inspect its world folder, and understand removal and backups."
+            data-keywords="server settings save profile version memory java allowed players command backups world remove folder"
+          >
+            <p class="eyebrow">Servers / day to day</p>
+            <h1>Manage a server</h1>
+            <p class="intro">
+              Select a server to see its status, addresses, controls, settings,
+              and log.
+            </p>
+            <h2>Change its settings</h2>
+            <p>
+              Stop the server before editing its
+              <strong>Minecraft version</strong>, <strong>Memory (MB)</strong>,
+              optional <strong>Java executable</strong>, sharing choice, or
+              <strong>Allowed players</strong>. Click
+              <strong>Save profile</strong> when finished. Version upgrades back
+              up the world and configuration in that server's
+              <code>backups</code> folder; downgrades and changing server type
+              need a separate server profile.
+            </p>
+            <h2>Use its controls</h2>
+            <p>
+              <strong>Start</strong> prepares and runs it.
+              <strong>Stop</strong> asks Minecraft to save before closing. While
+              running, <strong>Server command</strong> and
+              <strong>Send</strong> pass a command to that server, and
+              <strong>Server log</strong> shows its latest output. Use
+              <strong>Open folder</strong> to inspect the world and backups.
+              Change access through <strong>Allowed players</strong>; commands
+              that disable the whitelist or change operators are blocked.
+            </p>
+            <div class="callout warning">
+              <p>
+                <strong>Remove</strong> takes the server out of your library,
+                but keeps its world files on disk. It is not a backup or
+                delete-world command. There is no in-app backup restore yet, so
+                keep a separate copy of worlds you cannot afford to lose.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="sharing"
+            data-page
+            data-title="Share a server"
+            data-summary="Understand local and public addresses, allowed players, and temporary relay sharing."
+            data-keywords="server share friends public address local address whitelist relay consent e4mc connection"
+          >
+            <p class="eyebrow">Servers / play together</p>
+            <h1>Share a server</h1>
+            <p class="intro">
+              A server can be playable on your computer without being reachable
+              by friends. Turn on sharing only when it is offered for your
+              server and you need it.
+            </p>
+            <ol class="steps">
+              <li>
+                For a supported server type, turn on
+                <strong>Share with friends using Server-Hosting</strong> and
+                accept its separate consent.
+              </li>
+              <li>
+                Keep the server's <strong>Allowed players</strong> list current.
+                Include your own Minecraft username and each friend who should
+                join, then save.
+              </li>
+              <li>
+                Start the server and wait until it is running. Copy its
+                <strong>Public address</strong> for friends;
+                <strong>On this PC</strong> is only for your own computer.
+              </li>
+              <li>
+                Keep Coffee Client and the server running while friends play.
+                Stop the server when the session is over.
+              </li>
+            </ol>
+            <div class="callout warning">
+              <p>
+                Sharing uses a third-party relay and can fail independently of
+                the local server. Public addresses are temporary and may change.
+                If the public address disappears, check the server status and
+                log before sending an old address again. Do not disable the
+                allowed-player list or online authentication to work around a
+                connection error.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="console"
+            data-page
+            data-title="Read logs"
+            data-summary="Use launcher and server logs to narrow down a failed launch or connection."
+            data-keywords="console logs warning error fatal crash server log diagnostics support"
+          >
+            <p class="eyebrow">Troubleshooting / logs</p>
+            <h1>Read logs</h1>
+            <p class="intro">
+              A useful error message is usually close to the time the problem
+              happened.
+            </p>
+            <h2>Launcher and game</h2>
+            <p>
+              Open <strong>Console</strong> near the top of Coffee Client. Use
+              its <strong>All</strong>, <strong>Warnings</strong>,
+              <strong>Errors</strong>, and <strong>Fatal</strong> filters to
+              narrow the view. Try the action again, then read the newest
+              entries rather than an older message from a different profile.
+            </p>
+            <h2>Hosted server</h2>
+            <p>
+              In <strong>Servers</strong>, select the server and read
+              <strong>Server log</strong> beneath its controls. A server that is
+              still preparing has not necessarily failed. If it exits, note the
+              last error and the server type and Minecraft version.
+            </p>
+            <div class="callout">
+              <p>
+                When reporting a problem, include what you clicked, the profile
+                or server type, Minecraft version, and the relevant error text.
+                Remove account tokens, sign-in codes, personal paths, and
+                private addresses before sharing logs publicly.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="updates"
+            data-page
+            data-title="Update Coffee Client"
+            data-summary="Check for launcher updates and install an available release."
+            data-keywords="updater release check for updates restart to update automatic"
+          >
+            <p class="eyebrow">Settings / updates</p>
+            <h1>Update Coffee Client</h1>
+            <p class="intro">
+              Coffee Client checks for a new launcher release when it opens.
+            </p>
+            <ol class="steps">
+              <li>
+                When an <strong>Update available</strong> pop-up appears, click
+                <strong>Update</strong> to download it, or
+                <strong>Later</strong> to stay on this version for now.
+              </li>
+              <li>
+                You can also open <strong>Settings → Updates</strong> and click
+                <strong>Check for updates</strong>. Use
+                <strong>Release notes</strong> to review what changed.
+              </li>
+              <li>
+                When the download is ready, choose
+                <strong>Restart to update</strong> and let Coffee Client finish
+                installing.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                Automatic launcher updates work for the installed Windows
+                version and writable Linux x64 AppImages. Development builds,
+                Windows portable builds, and unpacked Linux builds do not
+                auto-update. This is separate from changing a Minecraft
+                profile's game version.
+              </p>
+            </div>
+            <p>
+              Do not close the launcher in the middle of an update unless it
+              reports an error. If an update fails, check the message in
+              <strong>Settings → Updates</strong> and try again when your
+              connection is stable.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="appearance"
+            data-page
+            data-title="Appearance and Discord"
+            data-summary="Switch Coffee Client's look and choose whether activity appears on Discord."
+            data-keywords="theme dark light black white coffee type background beans discord status presence appearance"
+          >
+            <p class="eyebrow">Settings / personal choices</p>
+            <h1>Appearance &amp; Discord</h1>
+            <p class="intro">
+              Change how the launcher looks without changing the Minecraft
+              profile you play.
+            </p>
+            <h2>Launcher appearance</h2>
+            <p>
+              Open <strong>Settings &rarr; Appearance</strong>.
+              <strong>Coffee type</strong> switches the launcher's light and
+              dark colors. <strong>Background beans</strong> controls the
+              animated background. Guide &amp; help follows the launcher theme.
+              The standalone website has a separate
+              <strong>Theme</strong> selector for system, light, or dark mode.
+            </p>
+            <h2>Discord activity</h2>
+            <p>
+              Open <strong>Settings &rarr; Discord</strong> and choose whether
+              to <strong>Show launcher activity on Discord</strong>. Discord
+              must be open on your computer for that status to appear. The
+              Discord server buttons open community links; they are not required
+              to use the launcher.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="advanced"
+            data-page
+            data-title="Advanced features"
+            data-summary="Turn on Advanced to reveal extra file, performance and version choices."
+            data-keywords="settings advanced files memory performance versions java"
+          >
+            <p class="eyebrow">Settings / more control</p>
+            <h1>Advanced features</h1>
+            <p class="intro">
+              Turn on extra controls only when you need to change more than the
+              normal profile settings.
+            </p>
+            <ol class="steps">
+              <li>Open <strong>Settings</strong>.</li>
+              <li>
+                Turn on the <strong>Advanced</strong> switch in the Settings
+                menu.
+              </li>
+              <li>
+                For Java profiles, <strong>Files</strong> and
+                <strong>Performance</strong> become available. The Minecraft
+                version list can also show more versions supported by the chosen
+                loader.
+              </li>
+              <li>
+                Turn <strong>Advanced</strong> off again to return to the
+                simpler view. Check the selected Minecraft version before
+                launching, since a hidden snapshot choice may be replaced in the
+                list.
+              </li>
+            </ol>
+            <p>
+              Looking for pre-release game versions? See
+              <a href="#snapshots">Show Minecraft snapshots</a>.
+            </p>
+            <h2>Game files and Java</h2>
+            <p>
+              With a Java profile selected, open
+              <strong>Settings &rarr; Files</strong> to see its
+              <strong>Game folder</strong>,
+              <strong>Java command or path</strong>, and
+              <strong>Release channel</strong> choices. Use
+              <strong>Browse</strong> for a folder, then
+              <strong>Save changes</strong>. If versions look out of date, use
+              the <strong>Reload Minecraft versions</strong> control; the loader
+              still decides which versions can be selected.
+            </p>
+            <h2>Memory</h2>
+            <p>
+              Open <strong>Settings &rarr; Performance</strong> to set
+              <strong>Minimum memory (MB)</strong> and
+              <strong>Maximum memory (MB)</strong>. The
+              <strong>Half RAM</strong> shortcut sets a starting maximum from
+              your computer's memory. Click <strong>Save changes</strong>. These
+              are game-profile settings; a hosted server has its own
+              <strong>Memory (MB)</strong> field.
+            </p>
+            <div class="callout warning">
+              <p>
+                Advanced controls are for Java profiles, not Bedrock. Extra
+                version choices are still limited by loader support. Changing
+                Java, memory, or game files without knowing what a modpack needs
+                may stop it launching.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="snapshots"
+            data-page
+            data-title="Show Minecraft snapshots"
+            data-summary="Turn on Advanced to see available snapshots and pre-release Minecraft versions."
+            data-keywords="snapshot snapshots preview previews prerelease pre-release experimental minecraft version advanced"
+          >
+            <p class="eyebrow">Settings / game versions</p>
+            <h1>Show Minecraft snapshots</h1>
+            <p class="intro">
+              Advanced mode adds available snapshot and pre-release choices to
+              the Java version lists.
+            </p>
+            <ol class="steps">
+              <li>
+                On the <strong>Launcher</strong> screen, open
+                <strong>Settings</strong> and turn on
+                <strong>Advanced</strong> in the Settings menu.
+              </li>
+              <li>
+                For an existing Java profile, open its
+                <strong>Minecraft version</strong> list on the Launcher screen.
+                For a new profile, click
+                <strong>New profile / Import pack</strong>, choose
+                <strong>New profile</strong> and a <strong>Mod loader</strong>,
+                then open <strong>Minecraft version</strong>.
+              </li>
+              <li>
+                Choose a snapshot or pre-release from the versions available for
+                that loader.
+              </li>
+            </ol>
+            <div class="callout">
+              <p>
+                There is no separate snapshot switch.
+                <strong>Release channel</strong> under
+                <strong>Settings &rarr; Files</strong> does not control which
+                Minecraft versions appear. A mod loader may not support the
+                snapshot you want, so its list can be shorter than Vanilla's.
+              </p>
+            </div>
+            <p>
+              If you turn <strong>Advanced</strong> off later, snapshot-type
+              choices are hidden again. Check the version shown for your profile
+              before launching.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="files"
+            data-page
+            data-title="Find your files"
+            data-summary="Open the right profile or server folder and understand what stays after removal."
+            data-keywords="folder game files server world saves backups profile directory open folder location remove"
+          >
+            <p class="eyebrow">Files / keeping your work</p>
+            <h1>Find your files</h1>
+            <p class="intro">
+              Use the launcher to open the folder for the thing you are working
+              on. Avoid guessing from another profile's path.
+            </p>
+            <h2>Player profiles</h2>
+            <p>
+              Select the profile, open <strong>Mods</strong>,
+              <strong>Shaders</strong>, or <strong>Texture Packs</strong>, then
+              click <strong>Open folder</strong> to reach that content folder.
+              With <strong>Advanced</strong> on,
+              <strong>Settings &rarr; Files</strong> shows the profile's
+              <strong>Game folder</strong>. Worlds, screenshots, and
+              configuration belong to that profile's game files.
+            </p>
+            <h2>Hosted servers</h2>
+            <p>
+              Select a server in <strong>Servers</strong> and click
+              <strong>Open folder</strong>. Its world and content remain there
+              after you remove the server from the list. Version upgrades keep a
+              <code>backups</code> folder there, but Coffee Client does not have
+              an in-app restore button.
+            </p>
+            <div class="callout warning">
+              <p>
+                Before deleting files manually, stop the game or server and copy
+                worlds and settings you want to keep. The profile and server
+                <strong>Remove</strong> actions only remove library entries;
+                they do not erase folders for you.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="privacy"
+            data-page
+            data-title="Privacy and sharing"
+            data-summary="Know which actions stay local and which contact an account, content provider, or relay."
+            data-keywords="privacy local wiki fingerprints modrinth curseforge microsoft relay public address consent"
+          >
+            <p class="eyebrow">Your choices</p>
+            <h1>Privacy &amp; sharing</h1>
+            <p class="intro">
+              Not every feature sends the same information to the same place.
+              These are the choices worth knowing about.
+            </p>
+            <ul>
+              <li>
+                <strong>This guide</strong> is bundled with the launcher for
+                offline use. The web version is served by its website host; the
+                optional local server runs only on your computer.
+              </li>
+              <li>
+                <strong>Microsoft sign-in</strong> connects the Java account you
+                choose for authenticated play and account cosmetics. Modpack
+                import does not copy account credentials.
+              </li>
+              <li>
+                <strong>Find artwork</strong> sends fingerprints of installed
+                files in the selected profile to Modrinth to look for exact
+                matches. The files themselves stay on your computer.
+              </li>
+              <li>
+                <strong>Browse and downloads</strong> contact the selected
+                content provider. CurseForge downloads need authorized access
+                configured for this launcher.
+              </li>
+              <li>
+                <strong>Server-Hosting</strong> is off until you enable it for a
+                supported server and accept its separate consent. It uses a
+                third-party relay for a temporary public address.
+              </li>
+            </ul>
+            <div class="callout">
+              <p>
+                Keep sign-in codes and account details out of screenshots and
+                logs you share. If you only want to play locally, you do not
+                need to enable server sharing.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="article"
+            id="help"
+            data-page
+            data-title="When something goes wrong"
+            data-summary="Quick checks for login, launches, modpacks, skins and servers."
+            data-keywords="troubleshooting error crash help log failed connect"
+          >
+            <p class="eyebrow">Quick checks</p>
+            <h1>When something goes wrong</h1>
+            <p class="intro">
+              Most problems are easier to narrow down one change at a time.
+            </p>
+            <h2>A profile will not launch</h2>
+            <p>
+              Check that its Minecraft version matches its loader and mods. If
+              you just added a mod, disable it and try again. Imported packs may
+              need their first download to finish before they can launch.
+            </p>
+            <h2>A modpack import stops</h2>
+            <p>
+              Confirm it is a Modrinth <code>.mrpack</code> or an exported
+              CurseForge <code>.zip</code>, not a ZIP of loose mods. CurseForge
+              exports normally list files to download; missing authorized access
+              or a publisher-restricted file can stop the import. The failed
+              import does not add a half-finished profile. See
+              <a href="#import">Import a modpack</a>.
+            </p>
+            <h2>A mod or pack is missing</h2>
+            <p>
+              Check that you selected the intended profile before opening
+              <strong>Mods</strong>, <strong>Shaders</strong>, or
+              <strong>Texture Packs</strong>. Look under
+              <strong>Installed</strong>; a disabled mod stays listed but will
+              not load. A resource pack still needs to be enabled in Minecraft.
+            </p>
+            <h2>Online play or skins do not work</h2>
+            <p>
+              Go to <strong>Settings → Account</strong> and make sure the
+              correct Microsoft account is active. Applying a Java skin requires
+              a connected account. Bedrock skin changes happen inside Minecraft
+              for Windows.
+            </p>
+            <h2>A server will not start</h2>
+            <p>
+              Select the server and read its <strong>Server log</strong> and
+              status. The first start may still be preparing downloads or Java.
+              Check the selected server version, available memory, and any extra
+              requirements of its server type.
+            </p>
+            <h2>A friend cannot connect</h2>
+            <p>
+              Make sure the server says it is running, the friend is listed
+              under <strong>Allowed players</strong>, and you are giving them
+              the <strong>share</strong> address, not
+              <strong>On this PC</strong>. Sharing needs its separate consent
+              and a working relay connection.
+            </p>
+            <h2>An update does not install</h2>
+            <p>
+              Check <strong>Settings &rarr; Updates</strong> for its status and
+              release notes. Automatic updates are not available for development
+              or portable builds. A Minecraft game-version change is separate
+              from a launcher update.
+            </p>
+            <div class="callout">
+              <p>
+                When asking for help, include the Coffee Client version,
+                Minecraft version, loader or server type, what you clicked, and
+                the relevant error or log text. Do not share Microsoft sign-in
+                codes or private account details.
+              </p>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

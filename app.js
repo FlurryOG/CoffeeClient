@@ -53,7 +53,7 @@ function showPage(id) {
   );
   if (activeNavLink) setOpenGroup(activeNavLink.closest("[data-nav-group]"));
   document.title = `${chosen.dataset.title} | ${pageTitleSuffix}`;
-  const showCommunity = chosen.id === "start" && !embedded;
+  const showCommunity = !embedded;
   document.querySelector(".community").hidden = !showCommunity;
   document
     .querySelector(".content")

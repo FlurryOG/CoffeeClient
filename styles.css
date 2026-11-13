@@ -547,10 +547,19 @@ select:focus-visible {
   font-size: 16px;
 }
 .community {
+  position: sticky;
+  top: 100px;
+  max-height: calc(100dvh - 124px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
   min-width: 0;
   border-left: 1px solid var(--line);
   padding-left: 27px;
+  padding-right: 18px;
   margin-left: -28px;
+  margin-right: -18px;
 }
 .community h2 {
   font:
@@ -786,6 +795,9 @@ select:focus-visible {
     max-width: 1030px;
   }
   .community {
+    position: static;
+    max-height: none;
+    overflow: visible;
     width: min(100%, 370px);
     margin: 40px 0 0;
     padding: 28px 0 0;

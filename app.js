@@ -10,6 +10,9 @@ const sidebar = document.querySelector("#sidebar");
 const navGroups = [...sidebar.querySelectorAll("[data-nav-group]")];
 const embedded = window.parent !== window;
 const pageTitleSuffix = embedded ? "Guide & help" : "Coffee Client Wiki";
+const defaultPage = pages.find(
+  (page) => page.id === (embedded ? "start" : "installation"),
+);
 
 if (embedded) {
   document.documentElement.dataset.embedded = "true";
@@ -37,7 +40,7 @@ for (const group of navGroups) {
 }
 
 function showPage(id) {
-  const chosen = pages.find((page) => page.id === id) || pages[0];
+  const chosen = pages.find((page) => page.id === id) || defaultPage;
   for (const page of pages) page.hidden = page !== chosen;
   for (const link of links) {
     const active = link.getAttribute("href") === `#${chosen.id}`;
@@ -228,4 +231,7 @@ async function loadCommunity(card) {
 }
 
 if (!embedded) communityCards.forEach(loadCommunity);
+if (!embedded && !location.hash) {
+  window.history.replaceState(null, "", "#installation");
+}
 showPage(decodeURIComponent(location.hash.slice(1)));

@@ -167,10 +167,10 @@ communitySwitch.addEventListener("click", () => {
           switchingCommunity = false;
           communitySwitch.removeAttribute("aria-disabled");
         },
-        reducedMotion ? 0 : 360,
+        reducedMotion ? 0 : 320,
       );
     },
-    reducedMotion ? 0 : 200,
+    reducedMotion ? 0 : 300,
   );
 });
 

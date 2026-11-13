@@ -6,27 +6,7 @@
 
 /* Base colors mirror the launcher theme in src/styles.css. */
 :root {
-  color-scheme: light;
-  --bg: #f3ece3;
-  --panel: rgba(255, 252, 248, 0.9);
-  --surface: rgba(255, 252, 248, 0.98);
-  --text: #2a2018;
-  --muted: #6a594a;
-  --line: rgba(76, 55, 36, 0.16);
-  --accent: #8b5a2b;
-  --accent-strong: #6a3f1e;
-  --warning: #b07d34;
-  --shadow: 0 24px 60px rgba(70, 44, 21, 0.14);
-  --soft: rgba(88, 63, 40, 0.1);
-  --callout: rgba(139, 90, 43, 0.12);
-  --warning-soft: rgba(176, 125, 52, 0.14);
-  --step: #e7d7c4;
-  --banner: #6a3f1e;
-  --banner-text: #f4e9dd;
   font-family: "Bahnschrift", "Trebuchet MS", "Segoe UI", sans-serif;
-}
-
-:root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #0f0b08;
   --panel: rgba(32, 22, 16, 0.92);
@@ -316,39 +296,13 @@ select:focus-visible {
   padding: 7px 10px;
   color: var(--text);
 }
-.theme-control {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-:root[data-embedded="true"] .theme-control {
-  display: none;
-}
-.theme-label {
-  font-size: 12px;
-  color: var(--muted);
-  font-weight: 700;
-}
-.theme-control select {
-  height: 40px;
-  min-width: 106px;
-  padding: 0 10px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: var(--surface);
-  color: var(--text);
-  font-size: 13px;
-  font-weight: 650;
-  cursor: pointer;
-}
-
 .content {
   max-width: 1030px;
   margin: auto;
   padding: 52px clamp(24px, 5vw, 70px) 96px;
 }
 .article[data-page] {
+  overflow-wrap: anywhere;
   scroll-margin-top: 100px;
 }
 .eyebrow {
@@ -408,6 +362,20 @@ select:focus-visible {
   padding: 2px 5px;
   border-radius: 3px;
   font-size: 0.92em;
+}
+.article pre {
+  max-width: 750px;
+  margin: 20px 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--soft);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.article pre code {
+  padding: 0;
+  background: transparent;
 }
 .article a {
   font-weight: 650;
@@ -635,14 +603,6 @@ select:focus-visible {
   .topbar {
     gap: 10px;
   }
-  .theme-label {
-    display: none;
-  }
-  .theme-control select {
-    min-width: 82px;
-    padding: 0 5px;
-    font-size: 12px;
-  }
   .intro {
     font-size: 16px;
   }
@@ -668,7 +628,7 @@ select:focus-visible {
   }
 }
 @media print {
-  :root[data-theme="dark"] {
+  :root {
     color-scheme: light;
     --bg: #fff;
     --surface: #fff;

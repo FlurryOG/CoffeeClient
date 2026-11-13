@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
     <meta
       name="description"
       content="Local help for Coffee Client profiles, modpacks, accounts, skins, servers, updates and settings."
@@ -21,6 +22,35 @@
           ></a
         >
         <nav aria-label="Topics">
+          <div class="nav-group" data-nav-group>
+            <h2 class="nav-group-title">
+              <button
+                class="nav-group-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-installation"
+                data-nav-toggle
+              >
+                <span>Installation</span
+                ><span class="nav-chevron" aria-hidden="true"></span>
+              </button>
+            </h2>
+            <div
+              class="nav-group-links"
+              id="nav-installation"
+              data-nav-panel
+              hidden
+            >
+              <a class="nav-link" href="#installation" data-link
+                >Choose your download</a
+              >
+              <a class="nav-link" href="#install-windows" data-link
+                >Windows 10 &amp; 11</a
+              >
+              <a class="nav-link" href="#install-macos" data-link>macOS</a>
+              <a class="nav-link" href="#install-linux" data-link>Linux</a>
+            </div>
+          </div>
           <div class="nav-group" data-nav-group>
             <h2 class="nav-group-title">
               <button
@@ -191,18 +221,6 @@
               No guides found. Try a different word.
             </div>
           </div>
-          <label class="theme-control">
-            <span class="theme-label">Theme</span>
-            <select
-              id="theme-select"
-              aria-label="Wiki theme"
-              title="Wiki theme"
-            >
-              <option value="system">System</option>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
-          </label>
         </header>
         <div class="content">
           <article
@@ -249,7 +267,9 @@
             </div>
             <div class="callout">
               <p>
-                <strong>New to this?</strong> Start with
+                <strong>Not installed yet?</strong> Follow the
+                <a href="#installation">Installation guide</a> for Windows,
+                macOS, or Linux. Already installed? Start with
                 <a href="#profiles">Make a profile</a>. Coffee Client prepares
                 game files when you launch; the first launch can take longer
                 while it downloads what it needs.
@@ -272,6 +292,495 @@
             <p class="article-footer">
               The guide built into Coffee Client works offline. The web version
               needs an internet connection.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="installation"
+            data-page
+            hidden
+            data-title="Install Coffee Client"
+            data-summary="Choose the right Windows, macOS, or Linux download and know what happens next."
+            data-keywords="installation install download setup requirements operating system"
+          >
+            <p class="eyebrow">Installation / start here</p>
+            <h1>Install Coffee Client</h1>
+            <p class="intro">
+              Pick the download for your computer. You do not need Node.js, npm,
+              or the source code to use the launcher.
+            </p>
+            <p>
+              <a
+                href="https://github.com/FlurryOG/CoffeeClient/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open the official downloads</a
+              >, then expand <strong>Assets</strong> on the release page.
+              Version numbers in filenames change with each release.
+            </p>
+            <div class="guide-grid">
+              <a class="guide-card" href="#install-windows"
+                ><span class="num">WINDOWS</span
+                ><strong>Windows 10 &amp; 11</strong
+                ><span
+                  >64-bit Intel / AMD PC. Choose Coffee-Client-Setup.exe.</span
+                ></a
+              >
+              <a class="guide-card" href="#install-macos"
+                ><span class="num">MAC</span
+                ><strong>Intel &amp; Apple Silicon</strong
+                ><span
+                  >macOS 12 Monterey or newer. Choose the mac-universal.dmg
+                  preview.</span
+                ></a
+              >
+              <a class="guide-card" href="#install-linux"
+                ><span class="num">LINUX</span><strong>Linux x64</strong
+                ><span
+                  >64-bit Intel / AMD desktop. Choose the .AppImage
+                  download.</span
+                ></a
+              >
+            </div>
+            <h2>Which files do I need?</h2>
+            <p>
+              Download just the installer, disk image, or AppImage for your
+              system. The Mac <code>.zip</code> is an alternative to the disk
+              image, not an extra requirement. Files ending in
+              <code>.yml</code> or <code>.blockmap</code> support automatic
+              updates; you do not open them. The
+              <code>coffee-build-*.json</code> files are release verification
+              records, not installers. <strong>Source code</strong> archives are
+              for developers, not installation.
+            </p>
+            <div class="callout warning">
+              <p>
+                <strong>Use the official release page.</strong> Coffee Client's
+                current Windows installer is not publisher-signed, and its Mac
+                preview is unsigned and not notarized by Apple. Security
+                warnings can appear because the operating system cannot verify
+                the publisher. That is not proof that a file is safe. Verify the
+                download's source before deciding to open it.
+              </p>
+            </div>
+            <h2>After installation</h2>
+            <ol class="steps">
+              <li>
+                Open Coffee Client and choose
+                <strong>Sign in with Microsoft</strong>. Sign in only on
+                Microsoft's website in your browser, then return to the
+                launcher. Microsoft may ask for account consent or two-step
+                verification.
+              </li>
+              <li>
+                <a href="#profiles">Make a profile</a>, choose a Minecraft
+                version and loader, and launch. Java Edition online play
+                requires an account that owns Minecraft.
+              </li>
+              <li>
+                Allow time for the first launch to download Minecraft, the
+                required Java runtime, and loader files. You do not normally
+                need to install Java yourself.
+              </li>
+            </ol>
+            <p class="article-footer">
+              The requirements above describe the current Electron 41-based
+              launcher, not every Minecraft version or modpack. Individual games
+              can need newer graphics drivers, more memory, or a newer operating
+              system.
+              <a
+                href="https://www.electronjs.org/docs/latest/breaking-changes"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Electron platform support</a
+              >.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="install-windows"
+            data-page
+            hidden
+            data-title="Install on Windows"
+            data-summary="Install on Windows 10 or 11 and understand SmartScreen, publisher, and firewall prompts."
+            data-keywords="installation windows 10 11 setup exe smartscreen protected pc unknown publisher uac firewall"
+          >
+            <p class="eyebrow">Installation / Windows</p>
+            <h1>Windows 10 &amp; 11</h1>
+            <p class="intro">
+              Use a 64-bit Intel or AMD Windows PC. The standard download is the
+              installer, not the source archive.
+            </p>
+            <ol class="steps">
+              <li>
+                Open
+                <a
+                  href="https://github.com/FlurryOG/CoffeeClient/releases/latest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >the official release</a
+                >
+                and download <strong>Coffee-Client-Setup.exe</strong> from
+                Assets.
+              </li>
+              <li>
+                Open the completed download. Review any Windows security prompt
+                using the explanations below.
+              </li>
+              <li>
+                Follow the setup window, review the license, and choose an
+                installation folder you can write to. Finish setup and open
+                <strong>Coffee Client</strong> from its shortcut or the Start
+                menu.
+              </li>
+              <li>
+                <a href="#accounts">Connect your Microsoft account</a>, then
+                <a href="#profiles">create a profile</a>. You do not need the
+                Dev Mode batch file.
+              </li>
+            </ol>
+            <h2>Pop-ups you might see</h2>
+            <h3>Download is uncommon or cannot be verified</h3>
+            <p>
+              Some browsers warn about downloads that are new, unsigned, or not
+              widely downloaded. Check that you came from the official GitHub
+              release and that the filename matches. A browser warning is not a
+              malware scan result or a guarantee of safety. Do not disable
+              browser protection to download it.
+            </p>
+            <h3>Windows protected your PC</h3>
+            <p>
+              Microsoft Defender SmartScreen may not recognize the unsigned
+              installer. If you have verified its origin and choose to trust it,
+              <strong>More info</strong> may offer <strong>Run anyway</strong>.
+              Read the file and publisher details first. If your PC does not
+              offer this option, a security policy may block it; do not turn off
+              SmartScreen or work around a school or work policy.
+            </p>
+            <h3>Do you want to allow this app to make changes?</h3>
+            <p>
+              This is User Account Control. It may appear if setup needs
+              administrator permission, such as installing into a protected
+              folder. <strong>Unknown publisher</strong> means Windows cannot
+              verify a publisher signature. Check the app and its source before
+              approving. Routine launcher use should not require running as
+              administrator.
+            </p>
+            <h3>Windows Security or firewall access</h3>
+            <p>
+              Java or a locally hosted Minecraft server may ask to receive
+              network connections. This is separate from installing Coffee
+              Client. For local play with friends, allow only the network types
+              you actually need; do not automatically select public networks.
+              Ordinary downloads and Microsoft sign-in do not require opening an
+              inbound firewall port.
+            </p>
+            <div class="callout warning">
+              <p>
+                <strong>A threat detection is different.</strong> If antivirus
+                reports malware or a specific threat, stop and report the exact
+                message. Do not disable antivirus or add a blanket exclusion for
+                Coffee Client.
+              </p>
+            </div>
+            <h2>Updates &amp; common problems</h2>
+            <p>
+              The installed Windows version supports launcher updates. Keep its
+              installation folder writable. A portable build, if offered, does
+              not use the same automatic update path. On Windows in S mode or a
+              managed PC, installation outside the Microsoft Store may be
+              blocked; ask the device owner or administrator.
+            </p>
+            <p>
+              Windows 7, Windows 8, and 32-bit Windows are not supported by the
+              current launcher. Windows on ARM is not a separately tested native
+              build. Windows 10 compatibility does not extend Microsoft's
+              operating-system security support.
+            </p>
+            <p class="article-footer">
+              <a
+                href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/available-settings"
+                target="_blank"
+                rel="noopener noreferrer"
+                >About Microsoft's SmartScreen protections</a
+              >
+              &middot; <a href="#help">Get help</a>
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="install-macos"
+            data-page
+            hidden
+            data-title="Install on macOS"
+            data-summary="Set up the universal Mac preview, with separate instructions for newer macOS and Monterey."
+            data-keywords="installation mac macos apple silicon intel m1 m2 m3 m4 dmg zip gatekeeper unidentified developer open anyway monterey ventura sonoma sequoia tahoe old new"
+          >
+            <p class="eyebrow">Installation / macOS</p>
+            <h1>macOS</h1>
+            <p class="intro">
+              One universal download for Intel and Apple Silicon Macs. The
+              current launcher requires macOS 12 Monterey or newer.
+            </p>
+            <div class="callout">
+              <p>
+                <strong>Mac preview:</strong> this build is unsigned and not
+                notarized by Apple. Automatic launcher updates and public
+                friend-sharing are not supported in this preview. Local server
+                hosting is available. Download future Mac versions from the
+                official release page.
+              </p>
+            </div>
+            <ol class="steps">
+              <li>
+                Choose <strong>About This Mac</strong> from the Apple menu to
+                check your macOS version. An Intel processor and an Apple
+                M-series chip both use the
+                <strong>mac-universal</strong> download.
+              </li>
+              <li>
+                Open
+                <a
+                  href="https://github.com/FlurryOG/CoffeeClient/releases/latest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >the official release</a
+                >
+                and download
+                <strong>Coffee-Client-&lt;version&gt;-mac-universal.dmg</strong
+                >.
+              </li>
+              <li>
+                Open the disk image and drag <strong>Coffee Client</strong> into
+                <strong>Applications</strong>. If you chose the
+                <code>.zip</code> instead, extract it and move the app into
+                Applications. Do not launch from inside the archive or mounted
+                disk image.
+              </li>
+              <li>
+                Eject the disk image, then open Coffee Client from Applications.
+                If macOS blocks it, read the matching section below before
+                deciding whether to allow it.
+              </li>
+            </ol>
+            <h2>Newer macOS: Ventura 13 and later</h2>
+            <p>
+              Try opening the app once, then open
+              <strong
+                >Apple menu / System Settings / Privacy &amp; Security</strong
+              >. Under Security, macOS may show that Coffee Client was blocked.
+              If you trust the official download, choose
+              <strong>Open Anyway</strong>, review the confirmation, and
+              authenticate if asked. Wording and button locations vary by
+              release.
+            </p>
+            <p>
+              On <strong>Sequoia 15 and newer</strong>, Control-click / Open is
+              not a reliable way to approve an unverified app. Use Privacy &amp;
+              Security. If there is no Open Anyway option, check the warning
+              itself and any device-management restrictions rather than
+              disabling Gatekeeper.
+            </p>
+            <h2>Older supported macOS: Monterey 12</h2>
+            <p>
+              After trying to open the app, go to
+              <strong
+                >Apple menu / System Preferences / Security &amp; Privacy /
+                General</strong
+              >. If offered, <strong>Open Anyway</strong> approves just this app
+              after you review the warning. Unlock the pane if macOS asks.
+              Monterey may also offer
+              <strong>Control-click the app / Open</strong>, followed by an Open
+              confirmation, for an unidentified-developer warning.
+            </p>
+            <h2>Big Sur 11, Catalina, and earlier</h2>
+            <p>
+              The current launcher cannot run on these macOS versions. An older
+              Intel Mac is not automatically incompatible, but its installed
+              macOS must meet the requirement. Upgrade macOS only if Apple
+              supports that upgrade on your Mac. There is no verified legacy
+              Coffee Client build to recommend here; do not download unofficial
+              repacks or disable security features to force the current app to
+              start.
+            </p>
+            <h2>What the warnings mean</h2>
+            <h3>
+              Downloaded from the internet / are you sure you want to open it?
+            </h3>
+            <p>
+              This is macOS's first-open check for a downloaded app. Verify the
+              source and app name before choosing Open. The prompt is not asking
+              for your Microsoft password.
+            </p>
+            <h3>Unidentified developer / Apple could not verify this app</h3>
+            <p>
+              The preview has not completed Apple's publisher-signing and
+              notarization process, so Apple cannot verify it in the usual way.
+              The per-app approval steps above are an explicit trust decision,
+              not proof that a download is safe.
+              <a
+                href="https://support.apple.com/en-us/102445"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Read Apple's explanation</a
+              >.
+            </p>
+            <h3>
+              App is damaged / will damage your computer / malware detected
+            </h3>
+            <p>
+              Stop. These are not interchangeable with a routine
+              unidentified-developer warning. Remove the suspect download, get a
+              fresh copy from the official release, and report the exact message
+              if it persists. Do not use terminal commands to strip quarantine,
+              disable Gatekeeper, or bypass malware protection.
+            </p>
+            <h3>Password, Touch ID, folder access, or incoming connections</h3>
+            <p>
+              macOS may request your <strong>Mac login</strong> to approve an
+              app or copy it into Applications. That is not your Microsoft
+              login. Folder access can appear if you choose a protected
+              location; grant only the access you intended. An incoming-network
+              prompt usually relates to Minecraft Java or local server hosting,
+              not normal sign-in. A universal build should not normally require
+              Rosetta; if prompted, check that you downloaded the universal app.
+            </p>
+            <p class="article-footer">
+              Bedrock / Minecraft for Windows is not available through the Mac
+              launcher. Minecraft versions, graphics requirements, and mods have
+              their own compatibility limits. <a href="#help">Get help</a>.
+            </p>
+          </article>
+
+          <article
+            class="article"
+            id="install-linux"
+            data-page
+            hidden
+            data-title="Install on Linux"
+            data-summary="Run the x64 AppImage, fix file permissions or missing FUSE, and understand security prompts."
+            data-keywords="installation linux ubuntu debian mint fedora arch appimage chmod executable fuse libfuse2 libfuse2t64 sandbox apparmor"
+          >
+            <p class="eyebrow">Installation / Linux</p>
+            <h1>Linux</h1>
+            <p class="intro">
+              Coffee Client is available as an x64 AppImage for Intel and AMD
+              desktop computers. No package installer or source build is
+              normally needed.
+            </p>
+            <ol class="steps">
+              <li>
+                Use a current desktop distribution with x64 support. The
+                published AppImage targets <strong>x86_64 / amd64</strong>, not
+                ARM devices such as Raspberry Pi. Distribution libraries and
+                security policies can affect compatibility.
+              </li>
+              <li>
+                Open
+                <a
+                  href="https://github.com/FlurryOG/CoffeeClient/releases/latest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >the official release</a
+                >
+                and download
+                <strong>Coffee-Client-&lt;version&gt;.AppImage</strong>.
+              </li>
+              <li>
+                Move it to a permanent folder you own, such as
+                <strong>Applications</strong> in your home directory. Keep the
+                AppImage writable if you want automatic updates.
+              </li>
+              <li>
+                Right-click the file and open
+                <strong>Properties / Permissions</strong>. Enable
+                <strong>Allow executing file as program</strong> or
+                <strong>Is executable</strong>; the exact label depends on your
+                file manager.
+              </li>
+              <li>
+                Double-click the AppImage. If asked whether to execute or open
+                it as a file, choose the run option only after checking it is
+                your official download.
+              </li>
+            </ol>
+            <h2>Prefer the terminal?</h2>
+            <p>
+              Open a terminal in the folder containing your download. Substitute
+              its exact filename for
+              <code>Coffee-Client-VERSION.AppImage</code>:
+            </p>
+            <pre><code>chmod +x "Coffee-Client-VERSION.AppImage"
+./"Coffee-Client-VERSION.AppImage"</code></pre>
+            <p>
+              <code>chmod +x</code> grants execution permission to that file; it
+              does not install system packages or require administrator access.
+              Do not run the launcher with <code>sudo</code>.
+            </p>
+            <h2>Messages you might see</h2>
+            <h3>Permission denied / file is not executable</h3>
+            <p>
+              Check execution permission and move the file off a read-only or
+              <code>noexec</code> drive. The AppImage must be on a filesystem
+              that permits execution. Changing permissions alone cannot override
+              a no-execution mount policy.
+            </p>
+            <h3>AppImages require FUSE / libfuse.so.2 is missing</h3>
+            <p>
+              Some AppImages use the FUSE 2 compatibility library to mount their
+              contents. Your distribution may only include FUSE 3. On Ubuntu
+              24.04, the compatibility package is <code>libfuse2t64</code>; on
+              Ubuntu 22.04 it is <code>libfuse2</code>. Package names differ
+              elsewhere, so follow
+              <a
+                href="https://docs.appimage.org/user-guide/troubleshooting/fuse.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >the AppImage FUSE guide</a
+              >
+              for your distribution. Do not remove FUSE 3 or install random
+              replacement libraries.
+            </p>
+            <h3>Authentication required</h3>
+            <p>
+              Your software manager may ask for your Linux account password when
+              installing a missing system library. Normal AppImage launch does
+              not need that password. Microsoft sign-in belongs in your browser,
+              not in an administrator prompt.
+            </p>
+            <h3>No usable sandbox / user namespace or AppArmor error</h3>
+            <p>
+              Some distributions restrict the browser sandbox used by Electron
+              apps. Save the exact terminal output and check the distribution's
+              supported policy for AppImages. Do not use
+              <code>--no-sandbox</code>, run as root, or disable AppArmor
+              system-wide as a routine fix.
+            </p>
+            <h3>Nothing opens / missing library / GLIBC error</h3>
+            <p>
+              Run the AppImage from a terminal to see the actual error. Older
+              distributions may lack required system libraries; an AppImage does
+              not bundle every component of the operating system. Update through
+              your distribution's supported tools, or send the error with your
+              distro version and architecture when asking for help.
+            </p>
+            <h2>Updates &amp; first launch</h2>
+            <p>
+              Automatic updates are supported for the writable Linux x64
+              AppImage, not arbitrary extracted or unpacked builds. Desktop-menu
+              integration depends on your system; the file itself remains the
+              launcher. On first game launch, Coffee Client downloads the
+              required Minecraft and Java files. Bedrock / Minecraft for Windows
+              is not supported on Linux.
+            </p>
+            <p class="article-footer">
+              Linux does not have one universal set of pop-ups: wording varies
+              by distribution and desktop. If a security tool reports a threat,
+              stop and report it rather than adding an exclusion.
+              <a href="#help">Get help</a>.
             </p>
           </article>
 
@@ -1290,9 +1799,10 @@
               Open <strong>Settings &rarr; Appearance</strong>.
               <strong>Coffee type</strong> switches the launcher's light and
               dark colors. <strong>Background beans</strong> controls the
-              animated background. Guide &amp; help follows the launcher theme.
-              The standalone website has a separate
-              <strong>Theme</strong> selector for system, light, or dark mode.
+              animated background. This website stays in dark mode; the guide
+              built into Coffee Client follows the launcher theme. The
+              standalone website has a separate <strong>Theme</strong> selector
+              for system, light, or dark mode.
             </p>
             <h2>Discord activity</h2>
             <p>

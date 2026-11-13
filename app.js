@@ -8,12 +8,7 @@ const noResults = document.querySelector("#no-results");
 const menuButton = document.querySelector("#menu-button");
 const sidebar = document.querySelector("#sidebar");
 const navGroups = [...sidebar.querySelectorAll("[data-nav-group]")];
-const themeSelect = document.querySelector("#theme-select");
-const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 const embedded = window.parent !== window;
-const embeddedTheme = embedded
-  ? new URLSearchParams(location.search).get("theme")
-  : null;
 const pageTitleSuffix = embedded ? "Guide & help" : "Coffee Client Wiki";
 
 if (embedded) {
@@ -21,38 +16,6 @@ if (embedded) {
   document.querySelector(".topbar-label").textContent = "Guide & help";
   sidebar.setAttribute("aria-label", "Guide navigation");
 }
-
-function applyTheme(preference) {
-  const mode = ["system", "light", "dark"].includes(preference)
-    ? preference
-    : "system";
-  themeSelect.value = mode;
-  document.documentElement.dataset.theme =
-    mode === "system" ? (systemTheme.matches ? "dark" : "light") : mode;
-  if (!embedded) {
-    try {
-      localStorage.setItem("coffee-wiki-theme", mode);
-    } catch {
-      /* Storage may be disabled. */
-    }
-  }
-}
-
-let savedTheme = "system";
-if (!embedded) {
-  try {
-    savedTheme = localStorage.getItem("coffee-wiki-theme") || "system";
-  } catch {
-    /* Storage may be disabled. */
-  }
-}
-applyTheme(
-  embedded ? (embeddedTheme === "light" ? "light" : "dark") : savedTheme,
-);
-themeSelect.addEventListener("change", () => applyTheme(themeSelect.value));
-systemTheme.addEventListener("change", () => {
-  if (themeSelect.value === "system") applyTheme("system");
-});
 
 function setOpenGroup(groupToOpen) {
   for (const group of navGroups) {

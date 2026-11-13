@@ -575,6 +575,29 @@ select:focus-visible {
   margin-bottom: 22px;
   min-height: 38px;
 }
+.community-install {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 100%;
+  min-height: 38px;
+  margin-bottom: 22px;
+  padding: 8px 13px;
+  border: 1px solid #8a6242;
+  border-radius: 6px;
+  background: #302116;
+  color: var(--accent-strong);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.community-install svg {
+  flex: 0 0 17px;
+}
+.community-install:hover {
+  background: #402b1c;
+  border-color: var(--accent-strong);
+}
 #community-current {
   font-size: 13px;
   font-weight: 700;

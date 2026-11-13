@@ -791,6 +791,20 @@ select:focus-visible {
 }
 @media (max-width: 1250px) {
   .content.has-community {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 28px;
+    padding: 32px 24px 70px;
+  }
+  .community {
+    padding-left: 18px;
+    margin-left: -19px;
+  }
+  .discord-badge {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .content.has-community {
     display: block;
     max-width: 1030px;
   }
@@ -805,7 +819,7 @@ select:focus-visible {
     border-top: 1px solid var(--line);
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
   .shell {
     display: block;
   }
@@ -848,6 +862,10 @@ select:focus-visible {
   .content.has-community {
     padding: 30px 20px 70px;
   }
+  .community {
+    top: 88px;
+    max-height: calc(100dvh - 108px);
+  }
   .article[data-page] {
     scroll-margin-top: 82px;
   }
@@ -867,6 +885,11 @@ select:focus-visible {
   }
   .article h1 {
     font-size: 35px;
+  }
+}
+@media (max-width: 700px) {
+  .community {
+    max-height: none;
   }
 }
 @media (max-width: 480px) {

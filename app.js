@@ -18,6 +18,8 @@ if (embedded) {
   document.documentElement.dataset.embedded = "true";
   document.querySelector(".topbar-label").textContent = "Guide & help";
   sidebar.setAttribute("aria-label", "Guide navigation");
+  document.querySelector(".community").hidden = true;
+  document.querySelector(".content").classList.remove("has-community");
 }
 
 function setOpenGroup(groupToOpen) {
@@ -53,11 +55,6 @@ function showPage(id) {
   );
   if (activeNavLink) setOpenGroup(activeNavLink.closest("[data-nav-group]"));
   document.title = `${chosen.dataset.title} | ${pageTitleSuffix}`;
-  const showCommunity = !embedded;
-  document.querySelector(".community").hidden = !showCommunity;
-  document
-    .querySelector(".content")
-    .classList.toggle("has-community", showCommunity);
   sidebar.classList.remove("open");
   menuButton.setAttribute("aria-expanded", "false");
   window.scrollTo(0, 0);

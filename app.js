@@ -50,6 +50,11 @@ function showPage(id) {
   );
   if (activeNavLink) setOpenGroup(activeNavLink.closest("[data-nav-group]"));
   document.title = `${chosen.dataset.title} | ${pageTitleSuffix}`;
+  const showCommunity = chosen.id === "start" && !embedded;
+  document.querySelector(".community").hidden = !showCommunity;
+  document
+    .querySelector(".content")
+    .classList.toggle("has-community", showCommunity);
   sidebar.classList.remove("open");
   menuButton.setAttribute("aria-expanded", "false");
   window.scrollTo(0, 0);
@@ -126,4 +131,101 @@ document.addEventListener("keydown", (event) => {
     search.focus();
   }
 });
+const communityCards = [...document.querySelectorAll("[data-community]")];
+const communitySwitch = document.querySelector("#community-switch");
+let switchingCommunity = false;
+
+communitySwitch.addEventListener("click", () => {
+  if (switchingCommunity) return;
+  switchingCommunity = true;
+  communitySwitch.setAttribute("aria-disabled", "true");
+  const front = communityCards.find((card) =>
+    card.classList.contains("is-front"),
+  );
+  const back = communityCards.find((card) => card !== front);
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  front.classList.add("is-leaving");
+  window.setTimeout(
+    () => {
+      front.classList.replace("is-front", "is-back");
+      back.classList.replace("is-back", "is-front");
+      front.inert = true;
+      front.setAttribute("aria-hidden", "true");
+      back.inert = false;
+      back.removeAttribute("aria-hidden");
+      document.querySelector("#community-current").textContent =
+        back.querySelector("h3").textContent;
+      communitySwitch.setAttribute(
+        "aria-label",
+        `Switch server: show ${front.querySelector("h3").textContent} on top`,
+      );
+      front.classList.remove("is-leaving");
+      window.setTimeout(
+        () => {
+          switchingCommunity = false;
+          communitySwitch.removeAttribute("aria-disabled");
+        },
+        reducedMotion ? 0 : 360,
+      );
+    },
+    reducedMotion ? 0 : 200,
+  );
+});
+
+async function loadCommunity(card) {
+  const presence = card.querySelector(".discord-presence");
+  try {
+    const response = await fetch(
+      `https://discord.com/api/guilds/${card.dataset.community}/widget.json?v=${Math.floor(Date.now() / 300000)}`,
+      {
+        signal: AbortSignal.timeout(12000),
+        cache: "no-store",
+      },
+    );
+    if (!response.ok) throw new Error("Discord widget unavailable");
+    const data = await response.json();
+    presence.textContent = `${Number.isFinite(data.presence_count) ? data.presence_count : 0} members online`;
+    presence.classList.add("is-online");
+    const list = card.querySelector("ul");
+    for (const member of (Array.isArray(data.members)
+      ? data.members
+      : []
+    ).slice(0, 6)) {
+      const item = document.createElement("li");
+      const avatar = document.createElement("img");
+      avatar.alt = "";
+      avatar.width = avatar.height = 28;
+      avatar.loading = "lazy";
+      try {
+        const url = new URL(member.avatar_url);
+        if (
+          url.protocol === "https:" &&
+          ["cdn.discordapp.com", "cdn.discordapp.net"].includes(url.hostname)
+        )
+          avatar.src = url.href;
+      } catch {
+        /* Keep the avatar space when Discord omits an image. */
+      }
+      const name = document.createElement("span");
+      name.textContent = member.username || "Discord member";
+      item.append(avatar, name);
+      list.append(item);
+    }
+    if (data.instant_invite) {
+      const invite = new URL(data.instant_invite);
+      if (
+        invite.protocol === "https:" &&
+        ["discord.com", "discord.gg"].includes(invite.hostname)
+      )
+        card.querySelector(".discord-footer a").href = invite.href;
+    }
+  } catch {
+    presence.textContent =
+      "Online list unavailable. You're still welcome to join.";
+  }
+}
+
+if (!embedded) communityCards.forEach(loadCommunity);
 showPage(decodeURIComponent(location.hash.slice(1)));

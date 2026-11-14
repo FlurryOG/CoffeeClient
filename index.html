@@ -114,33 +114,6 @@
                 class="nav-group-toggle"
                 type="button"
                 aria-expanded="false"
-                aria-controls="nav-servers"
-                data-nav-toggle
-              >
-                <span>Host a server</span
-                ><span class="nav-chevron" aria-hidden="true"></span>
-              </button>
-            </h2>
-            <div class="nav-group-links" id="nav-servers" data-nav-panel hidden>
-              <a class="nav-link" href="#servers" data-link>Start a server</a>
-              <a class="nav-link" href="#server-types" data-link
-                >Choose a server type</a
-              >
-              <a class="nav-link" href="#server-content" data-link
-                >Server mods &amp; plugins</a
-              >
-              <a class="nav-link" href="#server-manage" data-link
-                >Manage a server</a
-              >
-              <a class="nav-link" href="#sharing" data-link>Share a server</a>
-            </div>
-          </div>
-          <div class="nav-group" data-nav-group>
-            <h2 class="nav-group-title">
-              <button
-                class="nav-group-toggle"
-                type="button"
-                aria-expanded="false"
                 aria-controls="nav-settings"
                 data-nav-toggle
               >
@@ -260,11 +233,6 @@
                 ><strong>Add an account</strong
                 ><span>Connect Microsoft for online Java play.</span></a
               >
-              <a class="guide-card" href="#servers"
-                ><span class="num">04 / PLAY TOGETHER</span
-                ><strong>Start a server</strong
-                ><span>Create a simple Vanilla server on this PC.</span></a
-              >
             </div>
             <div class="callout">
               <p>
@@ -279,7 +247,6 @@
             <h2>Know your way around</h2>
             <p>
               <strong>Launcher</strong> is where you choose a profile and play.
-              <strong>Servers</strong> holds servers hosted on your computer.
               <strong>Skins</strong> opens your skin library.
               <strong>Settings</strong> holds account, appearance, update, and
               advanced options.
@@ -287,7 +254,6 @@
             <div class="mini-links">
               <a href="#play">First launch</a><a href="#browse">Find mods</a
               ><a href="#mod-updates">Update mods</a><a href="#skins">Skins</a
-              ><a href="#sharing">Share a server</a
               ><a href="#help">Fix a problem</a>
             </div>
             <p class="article-footer">
@@ -471,12 +437,11 @@
             </p>
             <h3>Windows Security or firewall access</h3>
             <p>
-              Java or a locally hosted Minecraft server may ask to receive
-              network connections. This is separate from installing Coffee
-              Client. For local play with friends, allow only the network types
-              you actually need; do not automatically select public networks.
-              Ordinary downloads and Microsoft sign-in do not require opening an
-              inbound firewall port.
+              Minecraft Java may ask to receive network connections. This is
+              separate from installing Coffee Client. Allow only the network
+              types you actually need; do not automatically select public
+              networks. Ordinary downloads and Microsoft sign-in do not require
+              opening an inbound firewall port.
             </p>
             <div class="callout warning">
               <p>
@@ -529,10 +494,9 @@
             <div class="callout">
               <p>
                 <strong>Mac preview:</strong> this build is unsigned and not
-                notarized by Apple. Automatic launcher updates and public
-                friend-sharing are not supported in this preview. Local server
-                hosting is available. Download future Mac versions from the
-                official release page.
+                notarized by Apple. Automatic launcher updates are not supported
+                in this preview. Download future Mac versions from the official
+                release page.
               </p>
             </div>
             <ol class="steps">
@@ -645,9 +609,9 @@
               app or copy it into Applications. That is not your Microsoft
               login. Folder access can appear if you choose a protected
               location; grant only the access you intended. An incoming-network
-              prompt usually relates to Minecraft Java or local server hosting,
-              not normal sign-in. A universal build should not normally require
-              Rosetta; if prompted, check that you downloaded the universal app.
+              prompt may relate to Minecraft Java, not normal sign-in. A
+              universal build should not normally require Rosetta; if prompted,
+              check that you downloaded the universal app.
             </p>
             <p class="article-footer">
               Bedrock / Minecraft for Windows is not available through the Mac
@@ -1419,289 +1383,11 @@
 
           <article
             class="article"
-            id="servers"
-            data-page
-            data-title="Start a server"
-            data-summary="Create and start a simple Vanilla server, and optionally share it with friends."
-            data-keywords="server host vanilla create start allowed players eula address share relay"
-          >
-            <p class="eyebrow">Servers / first server</p>
-            <h1>Start a simple server</h1>
-            <p class="intro">
-              Host a Minecraft world on this computer while Coffee Client stays
-              open.
-            </p>
-            <ol class="steps">
-              <li>
-                Open the <strong>Servers</strong> view and find
-                <strong>New server</strong>.
-              </li>
-              <li>
-                Enter a <strong>Server name</strong>. Choose
-                <strong>Vanilla</strong> as <strong>Server type</strong> for an
-                unmodded server, then choose a
-                <strong>Minecraft version</strong>.
-              </li>
-              <li>
-                Leave <strong>Memory (MB)</strong> at its default unless you
-                know your computer needs something else.
-              </li>
-              <li>
-                Enter <strong>Allowed players</strong>, one Minecraft username
-                per line. Include your own username.
-              </li>
-              <li>
-                Read and accept the <strong>Minecraft EULA</strong>, then click
-                <strong>Create server</strong>.
-              </li>
-              <li>
-                Select the new server and click <strong>Start</strong>. Wait for
-                its status and log to show it is ready before connecting.
-              </li>
-            </ol>
-            <div class="callout">
-              <p>
-                <strong>Create</strong> only saves the server.
-                <strong>Start</strong> downloads and prepares what it needs,
-                then runs it. The first start can take longer. The
-                <strong>On this PC</strong> address is for this computer only.
-              </p>
-            </div>
-            <h2>Invite a friend</h2>
-            <p>
-              While creating or editing a server, turn on
-              <strong>Share with friends using Server-Hosting</strong> and
-              accept its separate consent. After the server starts, use the
-              share address shown in the server details. Sharing uses a
-              third-party relay and is intended for temporary sessions; do not
-              assume the address is permanent. Only the usernames in
-              <strong>Allowed players</strong> can join.
-            </p>
-            <div class="callout warning">
-              <p>
-                Keep Coffee Client open while people play. Closing Coffee stops
-                its running servers. Use <strong>Stop</strong> and wait for the
-                world to save before shutting down your computer.
-                <strong>Remove</strong> removes the library entry, but server
-                world files are kept on disk.
-              </p>
-            </div>
-            <h2>Beyond Vanilla</h2>
-            <p>
-              The server type list also includes Fabric, Quilt, Forge, NeoForge,
-              Paper, Purpur, Folia, Spigot, SpongeVanilla, and Pumpkin where
-              compatible versions are available. Pick the type your players and
-              server content require. Some types need extra setup or are
-              experimental; Vanilla is the easiest first server. See
-              <a href="#server-types">Choose a server type</a> for the
-              differences.
-            </p>
-          </article>
-
-          <article
-            class="article"
-            id="server-types"
-            data-page
-            data-title="Choose a server type"
-            data-summary="Pick Vanilla, a mod loader, a plugin server, or Pumpkin for your group."
-            data-keywords="vanilla fabric quilt forge neoforge paper purpur folia spigot sponge pumpkin server type mods plugins"
-          >
-            <p class="eyebrow">Servers / choosing</p>
-            <h1>Choose a server type</h1>
-            <p class="intro">
-              The best choice depends on the content your group needs. Choose
-              the type before making the server.
-            </p>
-            <ul>
-              <li>
-                <strong>Vanilla:</strong> standard Minecraft with no server mod
-                or plugin workflow. Start here for a simple world.
-              </li>
-              <li>
-                <strong>Fabric, Quilt, Forge, NeoForge:</strong> use server mods
-                built for that loader and Minecraft version. Players may also
-                need matching client mods.
-              </li>
-              <li>
-                <strong>Paper, Purpur, Spigot:</strong> use plugins rather than
-                Fabric or Forge mods. Spigot needs Git and a compatible JDK for
-                its first build.
-              </li>
-              <li>
-                <strong>Folia:</strong> a Paper-family server that requires
-                plugins made for Folia. Its available BETA builds need explicit
-                experimental consent.
-              </li>
-              <li>
-                <strong>SpongeVanilla:</strong> choose it for Sponge-compatible
-                server content.
-              </li>
-              <li>
-                <strong>Pumpkin:</strong> an experimental native server using
-                WASM plugins rather than Java JARs. It requires separate consent
-                and does not offer Server-Hosting sharing.
-              </li>
-            </ul>
-            <div class="callout warning">
-              <p>
-                Not every Minecraft release is available for every server type.
-                The version list is filtered by the selected type. A client mod
-                and a server plugin are not interchangeable.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="article"
-            id="server-content"
-            data-page
-            data-title="Server mods and plugins"
-            data-summary="Add compatible content to a stopped modded server."
-            data-keywords="server mods plugins fabric forge neoforge paper folia spigot pumpkin wasm import search enable"
-          >
-            <p class="eyebrow">Servers / content</p>
-            <h1>Server mods &amp; plugins</h1>
-            <p class="intro">
-              Server content lives with that server, not with your player
-              profile.
-            </p>
-            <ol class="steps">
-              <li>
-                Stop the server and select it in <strong>Servers</strong>.
-              </li>
-              <li>
-                Open its <strong>Mods</strong>, <strong>Plugins</strong>, or
-                <strong>WASM plugins</strong> tab, depending on server type.
-              </li>
-              <li>
-                Use <strong>Browse mods</strong> or
-                <strong>Browse plugins</strong> to search compatible provider
-                content where available, or click <strong>Import</strong> for a
-                trusted local file.
-              </li>
-              <li>
-                Use the switch next to an installed file to enable or disable
-                it. Restart the server after content changes.
-              </li>
-            </ol>
-            <div class="callout warning">
-              <p>
-                Manual imports are not compatibility-checked. Fabric, Quilt,
-                Forge, and NeoForge use their matching server mods; Paper-family
-                servers use plugins. Folia plugins need Folia support. Pumpkin
-                uses WASM plugins and does not have the catalog search shown for
-                other types. Vanilla has no content tab.
-              </p>
-            </div>
-            <p>
-              You cannot change server content while that server is preparing or
-              running. If a newly added file prevents startup, stop the server,
-              disable that file, and check the
-              <a href="#console">Server log</a>.
-            </p>
-          </article>
-
-          <article
-            class="article"
-            id="server-manage"
-            data-page
-            data-title="Manage a server"
-            data-summary="Change a stopped server, inspect its world folder, and understand removal and backups."
-            data-keywords="server settings save profile version memory java allowed players command backups world remove folder"
-          >
-            <p class="eyebrow">Servers / day to day</p>
-            <h1>Manage a server</h1>
-            <p class="intro">
-              Select a server to see its status, addresses, controls, settings,
-              and log.
-            </p>
-            <h2>Change its settings</h2>
-            <p>
-              Stop the server before editing its
-              <strong>Minecraft version</strong>, <strong>Memory (MB)</strong>,
-              optional <strong>Java executable</strong>, sharing choice, or
-              <strong>Allowed players</strong>. Click
-              <strong>Save profile</strong> when finished. Version upgrades back
-              up the world and configuration in that server's
-              <code>backups</code> folder; downgrades and changing server type
-              need a separate server profile.
-            </p>
-            <h2>Use its controls</h2>
-            <p>
-              <strong>Start</strong> prepares and runs it.
-              <strong>Stop</strong> asks Minecraft to save before closing. While
-              running, <strong>Server command</strong> and
-              <strong>Send</strong> pass a command to that server, and
-              <strong>Server log</strong> shows its latest output. Use
-              <strong>Open folder</strong> to inspect the world and backups.
-              Change access through <strong>Allowed players</strong>; commands
-              that disable the whitelist or change operators are blocked.
-            </p>
-            <div class="callout warning">
-              <p>
-                <strong>Remove</strong> takes the server out of your library,
-                but keeps its world files on disk. It is not a backup or
-                delete-world command. There is no in-app backup restore yet, so
-                keep a separate copy of worlds you cannot afford to lose.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="article"
-            id="sharing"
-            data-page
-            data-title="Share a server"
-            data-summary="Understand local and public addresses, allowed players, and temporary relay sharing."
-            data-keywords="server share friends public address local address whitelist relay consent e4mc connection"
-          >
-            <p class="eyebrow">Servers / play together</p>
-            <h1>Share a server</h1>
-            <p class="intro">
-              A server can be playable on your computer without being reachable
-              by friends. Turn on sharing only when it is offered for your
-              server and you need it.
-            </p>
-            <ol class="steps">
-              <li>
-                For a supported server type, turn on
-                <strong>Share with friends using Server-Hosting</strong> and
-                accept its separate consent.
-              </li>
-              <li>
-                Keep the server's <strong>Allowed players</strong> list current.
-                Include your own Minecraft username and each friend who should
-                join, then save.
-              </li>
-              <li>
-                Start the server and wait until it is running. Copy its
-                <strong>Public address</strong> for friends;
-                <strong>On this PC</strong> is only for your own computer.
-              </li>
-              <li>
-                Keep Coffee Client and the server running while friends play.
-                Stop the server when the session is over.
-              </li>
-            </ol>
-            <div class="callout warning">
-              <p>
-                Sharing uses a third-party relay and can fail independently of
-                the local server. Public addresses are temporary and may change.
-                If the public address disappears, check the server status and
-                log before sending an old address again. Do not disable the
-                allowed-player list or online authentication to work around a
-                connection error.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="article"
             id="console"
             data-page
             data-title="Read logs"
-            data-summary="Use launcher and server logs to narrow down a failed launch or connection."
-            data-keywords="console logs warning error fatal crash server log diagnostics support"
+            data-summary="Use launcher and game logs to narrow down a failed launch or connection."
+            data-keywords="console logs warning error fatal crash diagnostics support"
           >
             <p class="eyebrow">Troubleshooting / logs</p>
             <h1>Read logs</h1>
@@ -1717,19 +1403,12 @@
               narrow the view. Try the action again, then read the newest
               entries rather than an older message from a different profile.
             </p>
-            <h2>Hosted server</h2>
-            <p>
-              In <strong>Servers</strong>, select the server and read
-              <strong>Server log</strong> beneath its controls. A server that is
-              still preparing has not necessarily failed. If it exits, note the
-              last error and the server type and Minecraft version.
-            </p>
             <div class="callout">
               <p>
                 When reporting a problem, include what you clicked, the profile
-                or server type, Minecraft version, and the relevant error text.
-                Remove account tokens, sign-in codes, personal paths, and
-                private addresses before sharing logs publicly.
+                type, Minecraft version, and the relevant error text. Remove
+                account tokens, sign-in codes, personal paths, and private
+                addresses before sharing logs publicly.
               </p>
             </div>
           </article>
@@ -1871,8 +1550,7 @@
               <strong>Maximum memory (MB)</strong>. The
               <strong>Half RAM</strong> shortcut sets a starting maximum from
               your computer's memory. Click <strong>Save changes</strong>. These
-              are game-profile settings; a hosted server has its own
-              <strong>Memory (MB)</strong> field.
+              are game-profile settings.
             </p>
             <div class="callout warning">
               <p>
@@ -1938,8 +1616,8 @@
             id="files"
             data-page
             data-title="Find your files"
-            data-summary="Open the right profile or server folder and understand what stays after removal."
-            data-keywords="folder game files server world saves backups profile directory open folder location remove"
+            data-summary="Open the right profile folder and understand what stays after removal."
+            data-keywords="folder game files world saves backups profile directory open folder location remove"
           >
             <p class="eyebrow">Files / keeping your work</p>
             <h1>Find your files</h1>
@@ -1957,20 +1635,13 @@
               <strong>Game folder</strong>. Worlds, screenshots, and
               configuration belong to that profile's game files.
             </p>
-            <h2>Hosted servers</h2>
-            <p>
-              Select a server in <strong>Servers</strong> and click
-              <strong>Open folder</strong>. Its world and content remain there
-              after you remove the server from the list. Version upgrades keep a
-              <code>backups</code> folder there, but Coffee Client does not have
-              an in-app restore button.
-            </p>
             <div class="callout warning">
               <p>
-                Before deleting files manually, stop the game or server and copy
-                worlds and settings you want to keep. The profile and server
-                <strong>Remove</strong> actions only remove library entries;
-                they do not erase folders for you.
+                Before deleting files manually, stop the game and copy worlds
+                and settings you want to keep. The profile
+                <strong>Remove</strong>
+                action only removes the library entry; it does not erase
+                folders.
               </p>
             </div>
           </article>
@@ -1980,8 +1651,8 @@
             id="privacy"
             data-page
             data-title="Privacy and sharing"
-            data-summary="Know which actions stay local and which contact an account, content provider, or relay."
-            data-keywords="privacy local wiki fingerprints modrinth curseforge microsoft relay public address consent"
+            data-summary="Know which actions stay local and which contact an account or content provider."
+            data-keywords="privacy local wiki fingerprints modrinth curseforge microsoft"
           >
             <p class="eyebrow">Your choices</p>
             <h1>Privacy &amp; sharing</h1>
@@ -1992,8 +1663,7 @@
             <ul>
               <li>
                 <strong>This guide</strong> is bundled with the launcher for
-                offline use. The web version is served by its website host; the
-                optional local server runs only on your computer.
+                offline use. The web version is served by its website host.
               </li>
               <li>
                 <strong>Microsoft sign-in</strong> connects the Java account you
@@ -2010,17 +1680,11 @@
                 content provider. CurseForge downloads need authorized access
                 configured for this launcher.
               </li>
-              <li>
-                <strong>Server-Hosting</strong> is off until you enable it for a
-                supported server and accept its separate consent. It uses a
-                third-party relay for a temporary public address.
-              </li>
             </ul>
             <div class="callout">
               <p>
                 Keep sign-in codes and account details out of screenshots and
-                logs you share. If you only want to play locally, you do not
-                need to enable server sharing.
+                logs you share.
               </p>
             </div>
           </article>
@@ -2068,20 +1732,11 @@
               a connected account. Bedrock skin changes happen inside Minecraft
               for Windows.
             </p>
-            <h2>A server will not start</h2>
+            <h2>Cannot join a server</h2>
             <p>
-              Select the server and read its <strong>Server log</strong> and
-              status. The first start may still be preparing downloads or Java.
-              Check the selected server version, available memory, and any extra
-              requirements of its server type.
-            </p>
-            <h2>A friend cannot connect</h2>
-            <p>
-              Make sure the server says it is running, the friend is listed
-              under <strong>Allowed players</strong>, and you are giving them
-              the <strong>share</strong> address, not
-              <strong>On this PC</strong>. Sharing needs its separate consent
-              and a working relay connection.
+              Check the server address and confirm your Minecraft version and
+              any required mods match the server. If access is restricted, ask
+              the server's administrator for help.
             </p>
             <h2>An update does not install</h2>
             <p>
@@ -2093,9 +1748,9 @@
             <div class="callout">
               <p>
                 When asking for help, include the Coffee Client version,
-                Minecraft version, loader or server type, what you clicked, and
-                the relevant error or log text. Do not share Microsoft sign-in
-                codes or private account details.
+                Minecraft version, loader, what you clicked, and the relevant
+                error or log text. Do not share Microsoft sign-in codes or
+                private account details.
               </p>
             </div>
           </article>
